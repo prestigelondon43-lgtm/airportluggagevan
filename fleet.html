@@ -52,6 +52,47 @@
                 transform: scale(1.03);
             }
         }
+
+        .custom-language-selector {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            background: #111111;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            padding: 4px 8px;
+            transition: all 0.3s ease;
+        }
+
+        .custom-language-selector:hover {
+            border-color: #c5a880;
+            /* Gold Highlight */
+        }
+
+        .custom-language-selector .globe-icon {
+            font-size: 13px;
+            margin-right: 5px;
+            color: #c5a880;
+        }
+
+        .custom-language-selector select {
+            background: transparent;
+            color: #ffffff;
+            border: none;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+            padding-right: 4px;
+        }
+
+        /* Dropdown options dark background */
+        .custom-language-selector select option {
+            background-color: #111111;
+            color: #ffffff;
+            padding: 8px;
+        }
     </style>
 
 </head>
@@ -116,14 +157,15 @@
             </div>
             <!-- Custom Clean Language Selector -->
             <div class="custom-language-selector">
+                <span class="globe-icon">🌐</span>
                 <select id="languageSelect" onchange="translatePage(this.value)">
-                    <option value="">Select Language</option>
-                    <option value="en">English (UK / US)</option>
-                    <option value="zh-CN">Chinese (Simplified)</option>
+                    <option value="">EN</option>
+                    <option value="en">English (UK/US)</option>
+                    <option value="zh-CN">Chinese</option>
                     <option value="tr">Turkish</option>
                     <option value="ko">Korean</option>
                     <option value="ja">Japanese</option>
-                    <option value="fa">Persian (Farsi)</option>
+                    <option value="fa">Persian</option>
                     <option value="ar">Arabic</option>
                     <option value="hi">Hindi</option>
                     <option value="ur">Urdu</option>
