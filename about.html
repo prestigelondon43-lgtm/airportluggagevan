@@ -82,10 +82,9 @@
                 <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
                     class="h-16 sm:h-20 w-auto object-contain transition duration-300 group-hover:scale-105">
                 <div class="flex flex-col border-l border-zincBorder pl-3 py-0.5">
-                    <span class="text-xs sm:text-sm font-serif font-bold tracking-[0.2em] text-white uppercase">LONDON
-                        PRESTIGE</span>
-                    <span class="text-[9px] tracking-[0.25em] text-zinc-400 uppercase font-medium mt-0.5">Airport
-                        Luggage Van</span>
+                    <span class="text-xs sm:text-sm font-serif font-bold tracking-[0.2em] text-white uppercase">Airport
+                        Luggage Van
+                    </span>
                 </div>
             </a>
 
@@ -95,7 +94,8 @@
                 <a href="service.html" class="hover:text-white transition text-zinc-400">Our Services</a>
                 <a href="fleet.html" class="hover:text-white transition text-zinc-400">Our Fleet</a>
                 <a href="worldwide.html" class="hover:text-white transition text-zinc-400">Worldwide</a>
-                <a href="booking.html" class="text-[11px] uppercase tracking-widest text-zinc-400 hover:text-white transition">Book Now</a>
+                <a href="booking.html"
+                    class="text-[11px] uppercase tracking-widest text-zinc-400 hover:text-white transition">Book Now</a>
                 <a href="contact.html" class="hover:text-white transition text-zinc-400">Contact Desk</a>
             </nav>
 
@@ -365,23 +365,23 @@
         }
         setInterval(nextSlide, 7000);
     </script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var currentPath = window.location.pathname.split('/').pop();
-    if (currentPath === '') { currentPath = 'index.html'; }
-    
-    var navLinks = document.querySelectorAll('header nav a, .nav-links a');
-    navLinks.forEach(function(link) {
-        var linkPath = link.getAttribute('href');
-        if (linkPath === currentPath) {
-            link.classList.add('text-gold', 'border-b', 'border-gold'); 
-            link.classList.remove('text-zinc-400', 'text-white');
-        } else {
-            link.classList.remove('text-gold', 'border-b', 'border-gold');
-        }
-    });
-});
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPath = window.location.pathname.split('/').pop();
+            if (currentPath === '') { currentPath = 'index.html'; }
+
+            var navLinks = document.querySelectorAll('header nav a, .nav-links a');
+            navLinks.forEach(function (link) {
+                var linkPath = link.getAttribute('href');
+                if (linkPath === currentPath) {
+                    link.classList.add('text-gold', 'border-b', 'border-gold');
+                    link.classList.remove('text-zinc-400', 'text-white');
+                } else {
+                    link.classList.remove('text-gold', 'border-b', 'border-gold');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
