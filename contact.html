@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Airport Luggage Van Services | London Prestige Chauffeur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        darkBg: '#0A0A0A',
+                        cardBg: '#141414',
+                        zincBorder: '#27272a'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght=0,400;0,600;1,400&display=swap');
+
+        .fade-slide {
+            display: none;
+        }
+
+        .fade-slide.active {
+            display: block;
+            animation: zoomOverlay 7s infinite ease-in-out;
+        }
+
+        @keyframes zoomOverlay {
+
+            0%,
+            100% {
+                opacity: 0.70;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.85;
+                transform: scale(1.03);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-darkBg text-zinc-300 font-sans antialiased selection:bg-white selection:text-black overflow-x-hidden">
+
+    <div class="fixed bottom-6 right-6 z-[100] flex flex-col space-y-3">
+        <a href="https://wa.me/442038277777" target="_blank"
+            class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition duration-300 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.93 0c3.166.001 6.141 1.233 8.375 3.469 2.235 2.237 3.465 5.212 3.464 8.377-.003 6.582-5.338 11.93-11.87 11.93a11.844 11.844 0 0 1-5.711-1.473L0 24zm6.208-3.834l.366.218a9.871 9.871 0 0 0 5.355 1.564c5.783 0 10.486-4.703 10.489-10.486.002-2.802-1.088-5.436-3.071-7.42a10.432 10.432 0 0 0-7.433-3.07C5.784 2.164 1.08 6.867 1.077 12.65a10.483 10.483 0 0 0 1.503 5.435l.239.38L1.752 22l3.666-1.1c1.554.848 3.3.1.517 2.162 1.341a9.82 9.82 0 0 0 3.996-1.125z" />
+            </svg>
+        </a>
+        <a href="tel:+442038277777"
+            class="bg-white text-black p-4 rounded-full shadow-2xl hover:scale-110 transition duration-300 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </a>
+    </div>
+
+    <header
+        class="border-b border-zincBorder border-opacity-50 bg-black/95 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between">
+
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
+                    class="h-16 sm:h-20 w-auto object-contain transition duration-300 group-hover:scale-105">
+                <div class="flex flex-col border-l border-zincBorder pl-3 py-0.5">
+                    <span class="text-xs sm:text-sm font-serif font-bold tracking-[0.2em] text-white uppercase">LONDON
+                        PRESTIGE</span>
+                    <span class="text-[9px] tracking-[0.25em] text-zinc-400 uppercase font-medium mt-0.5">Airport
+                        Luggage Van</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-[0.15em] font-medium">
+                <a href="index.html" class="text-white border-b border-white pb-1">Home</a>
+                <a href="about.html" class="hover:text-white transition text-zinc-400">About Us</a>
+                <a href="service.html" class="hover:text-white transition text-zinc-400">Our Services</a>
+                <a href="fleet.html" class="hover:text-white transition text-zinc-400">Our Fleet</a>
+                <a href="worldwide.html" class="hover:text-white transition text-zinc-400">Worldwide</a>
+                <a href="booking.html"
+                    class="text-[11px] uppercase tracking-widest text-zinc-400 hover:text-white transition">Book Now</a>
+                <a href="contact.html" class="hover:text-white transition text-zinc-400">Contact Desk</a>
+            </nav>
+
+            <!-- Responsive Phone Call Trigger -->
+            <div
+                class="flex items-center space-x-2 border border-zincBorder px-3 py-2 bg-zinc-900 hover:border-white transition">
+                <span class="text-xs">📞</span>
+                <a href="tel:+442038277777" class="text-[10px] text-white uppercase tracking-widest font-bold">
+                    +44 203 827 7777
+                </a>
+            </div>
+
+            <div x-data="{ open: false }" class="relative z-50">
+                <button @click="open = !open"
+                    class="border border-zincBorder px-3 py-2 text-[10px] text-white bg-zinc-900 uppercase tracking-widest flex items-center space-x-1.5 hover:border-white transition">
+                    <span>🌐 Translate</span>
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="absolute right-0 mt-2 w-48 bg-black border border-zincBorder shadow-2xl text-[11px] uppercase tracking-wider max-h-64 overflow-y-auto">
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-white transition">🇺🇸 English
+                        (US)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇬🇧
+                        English (UK)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇦🇪
+                        Arabic</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇨🇳
+                        Chinese</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇯🇵
+                        Japanese</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇵🇰
+                        Urdu</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇮🇳
+                        Hindi</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇰🇷
+                        Korean</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇫🇷
+                        French (Paris)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇪🇸
+                        Spanish</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTACT PAGE CONTENT (WITHOUT GLOBAL HEADER/FOOTER) ================= -->
+
+    <style>
+        /* Contact Specific Animation Framework */
+        @keyframes heroGrayscalePan {
+            0% {
+                transform: scale(1.02);
+                filter: grayscale(100%) brightness(0.25);
+            }
+
+            50% {
+                transform: scale(1.06);
+                filter: grayscale(100%) brightness(0.35);
+            }
+
+            100% {
+                transform: scale(1.02);
+                filter: grayscale(100%) brightness(0.25);
+            }
+        }
+
+        .animate-contact-hero {
+            animation: heroGrayscalePan 18s ease-in-out infinite;
+        }
+
+        .contact-input-field {
+            background-color: #121212;
+            border: 1px solid #27272a;
+            padding: 0.85rem;
+            color: #ffffff;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-input-field:focus {
+            border-color: #f59e0b;
+            outline: none;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.05);
+        }
+    </style>
+
+    <!-- ANIMATED HERO BLOCK WITH LUXURY THEME IMAGE -->
+    <section class="relative py-32 border-b border-zincBorder overflow-hidden bg-black">
+
+        <!-- Hero Background Layer -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="theme2.jpg" alt="London Prestige Chauffeur Contact Desk"
+                class="w-full h-full object-cover animate-contact-hero">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black"></div>
+        </div>
+
+        <!-- Content Matrix -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center space-y-3">
+            <span class="text-gold text-xs uppercase tracking-[0.4em] font-semibold block">24/7 Central Dispatch</span>
+            <h1 class="text-4xl md:text-5xl font-serif font-light text-white uppercase tracking-widest">
+                Connect With <span class="italic text-white font-normal">Operations</span>
+            </h1>
+            <div class="w-12 h-[1px] bg-gold mx-auto mt-4"></div>
+            <p class="text-zinc-500 text-[11px] uppercase tracking-widest max-w-xl mx-auto leading-relaxed pt-1">
+                Direct secure channels for corporate accounts, diplomatic transport planning, and bulk logistical
+                adjustments.
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN DUAL SECTION INTERACTION (MAP/INFO VS FORM) -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+            <!-- LEFT COLUMN: CONTACT DETAILS & GOOGLE MAP CONTAINER (5 Cols) -->
+            <div class="lg:col-span-5 space-y-10">
+
+                <!-- Structural Info Rows -->
+                <div class="space-y-6">
+                    <div class="border-l border-gold pl-4 space-y-1">
+                        <h4 class="text-[10px] uppercase tracking-widest text-zinc-500">London Head Office</h4>
+                        <p class="text-sm font-serif text-white tracking-wide">Airport Luggage Van, London CR7 8DP</p>
+                    </div>
+
+                    <div class="border-l border-zincBorder pl-4 space-y-1">
+                        <h4 class="text-[10px] uppercase tracking-widest text-zinc-500">Operational Desk</h4>
+                        <p class="text-sm font-serif text-white tracking-wide">
+                            <a href="tel:+442038277777" class="hover:text-gold transition">+44 203 827 7777</a>
+                        </p>
+                    </div>
+
+                    <div class="border-l border-zincBorder pl-4 space-y-1">
+                        <h4 class="text-[10px] uppercase tracking-widest text-zinc-500">Secure Digital Intake</h4>
+                        <p class="text-sm font-serif text-white tracking-wide">
+                            <a href="mailto:bookings@londonprestigechauffeur.com"
+                                class="hover:text-gold transition">bookings@londonprestigechauffeur.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PREMIUM GOOGLE MAPS INTERFACE & GMB DIRECT ROUTING -->
+                <div
+                    class="w-full bg-cardBg border border-zincBorder p-4 md:p-6 transition duration-500 hover:border-zinc-700">
+                    <div class="mb-4">
+                        <h3 class="text-xs uppercase tracking-[0.3em] text-gold font-bold flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                            Live Fleet Location Matrix
+                        </h3>
+                    </div>
+
+                    <!-- Elite Embedded Interactive Map Grid -->
+                    <div class="w-full h-[400px] bg-black border border-zincBorder/40 overflow-hidden relative group">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d159044.24949576857!2d-0.2961448202476562!3d51.52830638515431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1718228512395!5m2!1sen!2s"
+                            class="w-full h-full border-0 filter invert-[90%] hue-rotate-[180deg] saturate-[30%] brightness-[90%] opacity-80 group-hover:opacity-100 transition duration-500"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- GMB Verified Interactive Button Element -->
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/fuqc5xe3hrQN5kMm6" target="_blank" rel="noopener noreferrer"
+                            class="w-full flex items-center justify-center gap-3 text-[11px] uppercase tracking-[0.25em] text-center text-zinc-300 border border-zincBorder py-4 px-6 font-bold hover:bg-gold hover:text-black hover:border-gold transition duration-400 ease-in-out">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Open Verified Google Maps Profile
+                        </a>
+                    </div>
+                </div>
+
+            </div> <!-- LEFT COLUMN ENDS HERE PERFECTLY -->
+
+            <!-- RIGHT COLUMN: PREMIUM OPERATIONAL ENQUIRY FORM (7 Cols) -->
+            <div class="lg:col-span-7 bg-cardBg border border-zincBorder p-8 md:p-10">
+                <div class="mb-8">
+                    <h3 class="text-xl font-serif text-white uppercase tracking-wider">Operational Intake Form</h3>
+                    <p class="text-zinc-500 text-[10px] uppercase tracking-widest mt-1">Monitored 24/7 by on-duty
+                        dispatch controllers</p>
+                </div>
+
+                <form class="space-y-6" action="contact-submit.php" method="POST">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-zinc-500">Your Name</label>
+                            <input type="text" name="contact_name" class="contact-input-field" placeholder="John Doe"
+                                required>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-zinc-500">Corporate Email</label>
+                            <input type="email" name="contact_email" class="contact-input-field"
+                                placeholder="exec@company.com" required>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-zinc-500">Direct Contact
+                                Number</label>
+                            <input type="tel" name="contact_phone" class="contact-input-field"
+                                placeholder="+44 7700 900077" required>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-zinc-500">Enquiry Nature</label>
+                            <select name="contact_subject" class="contact-input-field appearance-none bg-[#121212]">
+                                <option value="general">General Logistics Inquiry</option>
+                                <option value="corporate">Corporate Account Setup</option>
+                                <option value="diplomatic">Diplomatic / High-Capacity Fleet Request</option>
+                                <option value="billing">Billing & Invoicing Query</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-zinc-500">Logistical Details /
+                            Message</label>
+                        <textarea name="contact_message" rows="5" class="contact-input-field resize-none"
+                            placeholder="Please outline routing parameters, asset requirements, or load volumes..."
+                            required></textarea>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit"
+                            class="w-full bg-black border border-gold text-gold py-4 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition tracking-[0.2em]">
+                            Transmit Secure Message &rarr;
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- ================= BRAND FOOTER WITH LARGER LOGO & RELEVANT INTERNAL LINKS ================= -->
+    <footer class="bg-black border-t border-zincBorder border-opacity-40 py-16 text-zinc-500 text-xs tracking-wider">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+            <!-- Company Block with Enlarged Premium Logo Layout (h-36 for Massive Bold Look) -->
+            <div class="space-y-4">
+                <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
+                    class="h-36 w-auto object-contain mb-2 transition duration-300 hover:scale-105">
+                <p class="leading-relaxed text-zinc-400 font-light text-[11px]">Elite multi-capacity travel coordination
+                    engineered for critical airport baggage allowances and luxurious group logistics.</p>
+                <div class="border border-zincBorder p-3 bg-zinc-900/40 inline-block">
+                    <p class="text-[10px] text-white font-medium uppercase tracking-widest">🛡️ Regulated by TFL & PCO
+                    </p>
+                    <p class="text-[9px] text-white mt-1">License No: 11678</p>
+                </div>
+            </div>
+
+            <!-- Custom Core Services Link Hub with Internal Links Relevance -->
+            <div>
+                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Our Luxury Services</h4>
+                <ul class="space-y-3 font-medium text-[11px] uppercase text-zinc-400">
+                    <li><a href="service.html" class="hover:text-white transition">Private Luxury Shuttle</a></li>
+                    <li><a href="service.html" class="hover:text-white transition">Heathrow Airport Transfer</a>
+                    </li>
+                    <li><a href="service.html" class="hover:text-white transition">Gatwick Airport Transfer</a></li>
+                    <li><a href="service.html" class="hover:text-white transition">Stansted Airport Transfer</a>
+                    </li>
+                    <li><a href="service.html" class="hover:text-white transition">London City Airport Service</a></li>
+                    <li><a href="service.html" class="hover:text-white transition">Luton Airport Transfer</a></li>
+                </ul>
+            </div>
+
+            <!-- Fleet Redirection Matrix Connected internally -->
+            <div>
+                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Fleet Segments</h4>
+                <ul class="space-y-3 font-medium text-[11px] uppercase text-zinc-400">
+                    <li><a href="fleet.html" class="hover:text-white transition">Mercedes E-Class</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Mercedes S-Class</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Mercedes V-Class</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Mercedes Vito</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Sprinter VIP 6-Seater</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Sprinter Cargo 8-Seater</a></li>
+                </ul>
+            </div>
+
+            <!-- Connections Panel with Social Media Icons -->
+            <div>
+                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Terminal Connection</h4>
+                <ul class="space-y-3 text-zinc-400 font-light text-[11px] mb-5">
+                    <li class="flex items-center space-x-2">
+                        <span>📞</span> <a href="tel:+442038277777"
+                            class="text-white font-medium hover:text-white transition">+44 203 827 7777</a>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span>📧</span> <span
+                            class="hover:text-white transition">bookings@londonprestigechauffeur.com</span>
+                    </li>
+                    <li class="flex items-start space-x-2 leading-relaxed">
+                        <span>📍</span> <span>Airport Luggage Van,<br>London, CR7 8DP</span>
+                    </li>
+                </ul>
+
+                <!-- Social Media Grid -->
+                <div class="flex items-center space-x-4 border-t border-zincBorder/30 pt-4">
+                    <a href="https://www.facebook.com/londonprestigechauffeur" target="_blank" rel="noopener noreferrer"
+                        class="text-zinc-400 hover:text-white transition duration-300" aria-label="Facebook Profile">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/londonprestigechauffeur" target="_blank"
+                        rel="noopener noreferrer" class="text-zinc-400 hover:text-white transition duration-300"
+                        aria-label="Instagram Profile">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-zincBorder border-opacity-20 pt-8 text-center text-[10px] font-light text-zinc-600 uppercase tracking-[0.2em]">
+            &copy; 2026 London Prestige Chauffeur. Managed with absolute security and discretion.
+        </div>
+    </footer>
+
+    <!-- Initialize AOS & Slider Controls -->
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.fade-slide');
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 7000);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPath = window.location.pathname.split('/').pop();
+            if (currentPath === '') { currentPath = 'index.html'; }
+
+            var navLinks = document.querySelectorAll('header nav a, .nav-links a');
+            navLinks.forEach(function (link) {
+                var linkPath = link.getAttribute('href');
+                if (linkPath === currentPath) {
+                    link.classList.add('text-gold', 'border-b', 'border-gold');
+                    link.classList.remove('text-zinc-400', 'text-white');
+                } else {
+                    link.classList.remove('text-gold', 'border-b', 'border-gold');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

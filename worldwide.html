@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Airport Luggage Van Services | London Prestige Chauffeur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        darkBg: '#0A0A0A',
+                        cardBg: '#141414',
+                        zincBorder: '#27272a'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght=0,400;0,600;1,400&display=swap');
+
+        .fade-slide {
+            display: none;
+        }
+
+        .fade-slide.active {
+            display: block;
+            animation: zoomOverlay 7s infinite ease-in-out;
+        }
+
+        @keyframes zoomOverlay {
+
+            0%,
+            100% {
+                opacity: 0.70;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.85;
+                transform: scale(1.03);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-darkBg text-zinc-300 font-sans antialiased selection:bg-white selection:text-black overflow-x-hidden">
+
+    <div class="fixed bottom-6 right-6 z-[100] flex flex-col space-y-3">
+        <a href="https://wa.me/442038277777" target="_blank"
+            class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition duration-300 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.93 0c3.166.001 6.141 1.233 8.375 3.469 2.235 2.237 3.465 5.212 3.464 8.377-.003 6.582-5.338 11.93-11.87 11.93a11.844 11.844 0 0 1-5.711-1.473L0 24zm6.208-3.834l.366.218a9.871 9.871 0 0 0 5.355 1.564c5.783 0 10.486-4.703 10.489-10.486.002-2.802-1.088-5.436-3.071-7.42a10.432 10.432 0 0 0-7.433-3.07C5.784 2.164 1.08 6.867 1.077 12.65a10.483 10.483 0 0 0 1.503 5.435l.239.38L1.752 22l3.666-1.1c1.554.848 3.3.1.517 2.162 1.341a9.82 9.82 0 0 0 3.996-1.125z" />
+            </svg>
+        </a>
+        <a href="tel:+442038277777"
+            class="bg-white text-black p-4 rounded-full shadow-2xl hover:scale-110 transition duration-300 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </a>
+    </div>
+
+    <header
+        class="border-b border-zincBorder border-opacity-50 bg-black/95 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between">
+
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
+                    class="h-16 sm:h-20 w-auto object-contain transition duration-300 group-hover:scale-105">
+                <div class="flex flex-col border-l border-zincBorder pl-3 py-0.5">
+                    <span class="text-xs sm:text-sm font-serif font-bold tracking-[0.2em] text-white uppercase">LONDON
+                        PRESTIGE</span>
+                    <span class="text-[9px] tracking-[0.25em] text-zinc-400 uppercase font-medium mt-0.5">Airport
+                        Luggage Van</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-[0.15em] font-medium">
+                <a href="index.html" class="text-white border-b border-white pb-1">Home</a>
+                <a href="about.html" class="hover:text-white transition text-zinc-400">About Us</a>
+                <a href="service.html" class="hover:text-white transition text-zinc-400">Our Services</a>
+                <a href="fleet.html" class="hover:text-white transition text-zinc-400">Our Fleet</a>
+                <a href="worldwide.html" class="hover:text-white transition text-zinc-400">Worldwide</a>
+                <a href="booking.html"
+                    class="text-[11px] uppercase tracking-widest text-zinc-400 hover:text-white transition">Book Now</a>
+                <a href="contact.html" class="hover:text-white transition text-zinc-400">Contact Desk</a>
+            </nav>
+
+            <!-- Responsive Phone Call Trigger -->
+            <div
+                class="flex items-center space-x-2 border border-zincBorder px-3 py-2 bg-zinc-900 hover:border-white transition">
+                <span class="text-xs">📞</span>
+                <a href="tel:+442038277777" class="text-[10px] text-white uppercase tracking-widest font-bold">
+                    +44 203 827 7777
+                </a>
+            </div>
+
+            <div x-data="{ open: false }" class="relative z-50">
+                <button @click="open = !open"
+                    class="border border-zincBorder px-3 py-2 text-[10px] text-white bg-zinc-900 uppercase tracking-widest flex items-center space-x-1.5 hover:border-white transition">
+                    <span>🌐 Translate</span>
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="absolute right-0 mt-2 w-48 bg-black border border-zincBorder shadow-2xl text-[11px] uppercase tracking-wider max-h-64 overflow-y-auto">
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-white transition">🇺🇸 English
+                        (US)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇬🇧
+                        English (UK)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇦🇪
+                        Arabic</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇨🇳
+                        Chinese</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇯🇵
+                        Japanese</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇵🇰
+                        Urdu</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇮🇳
+                        Hindi</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇰🇷
+                        Korean</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇫🇷
+                        French (Paris)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇪🇸
+                        Spanish</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <style>
+        /* Premium Smooth Animations */
+        @keyframes slowPan {
+            0% {
+                transform: scale(1) translateY(0);
+            }
+
+            50% {
+                transform: scale(1.08) translateY(-10px);
+            }
+
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes pulseGold {
+
+            0%,
+            100% {
+                opacity: 0.15;
+            }
+
+            50% {
+                opacity: 0.35;
+            }
+        }
+
+        .animate-bg-luxury {
+            animation: slowPan 20s ease-in-out infinite;
+        }
+
+        .animate-pulse-gold {
+            animation: pulseGold 4s ease-in-out infinite;
+        }
+
+        .global-card-glow {
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .global-card-glow:hover {
+            transform: translateY(-6px);
+            border-color: #f59e0b;
+            box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.1);
+        }
+    </style>
+
+    <section id="worldwide-hero"
+        class="relative w-full h-[60vh] min-h-[450px] flex items-center justify-center bg-black overflow-hidden">
+
+        <div class="absolute inset-0 w-full h-full">
+            <img src="theme5.jpg" alt="London Prestige Chauffeur Worldwide Network"
+                class="w-full h-full object-cover filter grayscale opacity-40 animate-[subtle-zoom_20s_ease-out_infinite]">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black"></div>
+        </div>
+
+        <div class="relative z-10 text-center max-w-4xl px-4 mx-auto space-y-6">
+            <div class="inline-block">
+                <span
+                    class="text-[11px] uppercase tracking-[0.4em] text-gold font-bold bg-gold/10 border border-gold/20 px-4 py-1.5 rounded-none">
+                    GLOBAL CHAUFFEUR NETWORK
+                </span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-serif text-white tracking-widest uppercase leading-tight">
+                WORLDWIDE <span class="italic font-light text-zinc-400">COVERAGE</span>
+            </h1>
+
+            <div class="w-20 h-[1px] bg-gold mx-auto"></div>
+
+            <p
+                class="text-xs md:text-sm text-zinc-400 uppercase tracking-[0.25em] max-w-2xl mx-auto leading-relaxed font-light">
+                Seamless cross-border executive transit and high-capacity airport logistics engineered for elite
+                international travelers across major global hubs.
+            </p>
+        </div>
+
+    </section>
+
+    <style>
+        @keyframes subtle-zoom {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    <!-- REGIONAL GLOBAL NETWORKS GRID WITH IMAGES -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Region 1: European Hubs -->
+            <div class="global-card-glow bg-cardBg border border-zincBorder group">
+                <div class="h-48 overflow-hidden">
+                    <img src="European Transits.jpg" alt="European Transits"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl">🇪🇺</span>
+                        <span class="text-[9px] uppercase tracking-widest text-gold font-bold">Primary Core</span>
+                    </div>
+                    <h3 class="text-lg font-serif uppercase tracking-wider text-white group-hover:text-gold transition">
+                        European Transits</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Flawless coordination across Paris CDG, Frankfurt, Amsterdam Schiphol, and major EU finance
+                        terminals.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Region 2: Asia Pacific Sectors -->
+            <div class="global-card-glow bg-cardBg border border-zincBorder group">
+                <div class="h-48 overflow-hidden">
+                    <img src="asia.jpg" alt="Asia Pacific Sectors"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl">🌏</span>
+                        <span
+                            class="text-[9px] uppercase tracking-widest text-zinc-400 font-bold border border-zincBorder px-2 py-0.5">APAC
+                            Logistics</span>
+                    </div>
+                    <h3 class="text-lg font-serif uppercase tracking-wider text-white group-hover:text-gold transition">
+                        Asia Pacific Sectors</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Premium high-payload van deployments servicing Singapore Changi, Tokyo Haneda, and Hong Kong
+                        International.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Region 3: North American Networks -->
+            <div class="global-card-glow bg-cardBg border border-zincBorder group">
+                <div class="h-48 overflow-hidden">
+                    <img src="america.jpg" alt="North American Networks"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl">🇺🇸</span>
+                        <span
+                            class="text-[9px] uppercase tracking-widest text-zinc-400 font-bold border border-zincBorder px-2 py-0.5">Transatlantic
+                            Link</span>
+                    </div>
+                    <h3 class="text-lg font-serif uppercase tracking-wider text-white group-hover:text-gold transition">
+                        North American Networks</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Synchronized fleet transitions managing heavy-weight infrastructure at New York JFK, Los Angeles
+                        LAX, and Toronto Pearson.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Region 4: Middle East & Africa -->
+            <div class="global-card-glow bg-cardBg border border-zincBorder group">
+                <div class="h-48 overflow-hidden">
+                    <img src="middle east.jpg" alt="Middle East & Africa"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl">🌍</span>
+                        <span class="text-[9px] uppercase tracking-widest text-gold font-bold">EMEA Sector</span>
+                    </div>
+                    <h3 class="text-lg font-serif uppercase tracking-wider text-white group-hover:text-gold transition">
+                        Middle East & Africa</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Elite diplomatic airside sync across Dubai DXB, Doha Hamad, Riyadh King Khalid, and major
+                        African financial capitals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-zinc-950 border-t border-zincBorder">
+        <div class="max-w-3xl mx-auto px-4 text-center mb-16">
+            <h3 class="text-3xl font-serif text-white uppercase tracking-wider">Global Dispatch Request</h3>
+            <p class="text-zinc-500 text-xs uppercase tracking-widest mt-2">Centralized international booking matrix for
+                worldwide fleet coordination</p>
+        </div>
+
+        <form class="max-w-3xl mx-auto px-4 space-y-8 grid grid-cols-1 md:grid-cols-2 md:gap-x-8 md:gap-y-6"
+            action="global-submit.php" method="POST">
+
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Corporate Name / Client</label>
+                <input type="text" name="global_name"
+                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
+                    placeholder="e.g. Luxury Travel Desk or Executive Name" required>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Target Region & City</label>
+                <input type="text" name="global_region"
+                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
+                    placeholder="e.g. Middle East (Dubai) or Europe (Paris)" required>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Flight & Terminal Specifics</label>
+                <input type="text" name="global_flight"
+                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
+                    placeholder="e.g. EK001 or Private Jet Tail Number" required>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Total Luggage Payload / Fleet
+                    Required</label>
+                <input type="text" name="global_baggage"
+                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
+                    placeholder="e.g. 25 Heavy Cases (Requires Sprinter)" required>
+            </div>
+
+            <div class="space-y-2 md:col-span-2">
+                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Global Operational Dispatch
+                    Date</label>
+                <input type="datetime-local" name="global_datetime"
+                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
+                    required>
+            </div>
+
+            <div class="md:col-span-2 pt-4">
+                <button type="submit"
+                    class="w-full bg-black border border-gold text-gold py-4 text-sm font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition">
+                    Initiate Global Dispatch &rarr;
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- ================= BRAND FOOTER WITH LARGER LOGO & RELEVANT INTERNAL LINKS ================= -->
+    <footer class="bg-black border-t border-zincBorder border-opacity-40 py-16 text-zinc-500 text-xs tracking-wider">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+            <!-- Company Block with Enlarged Premium Logo Layout (h-36 for Massive Bold Look) -->
+            <div class="space-y-4">
+                <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
+                    class="h-36 w-auto object-contain mb-2 transition duration-300 hover:scale-105">
+                <p class="leading-relaxed text-zinc-400 font-light text-[11px]">Elite multi-capacity travel coordination
+                    engineered for critical airport baggage allowances and luxurious group logistics.</p>
+                <div class="border border-zincBorder p-3 bg-zinc-900/40 inline-block">
+                    <p class="text-[10px] text-white font-medium uppercase tracking-widest">🛡️ Regulated by TFL & PCO
+                    </p>
+                    <p class="text-[9px] text-white mt-1">License No: 11678</p>
+                </div>
+            </div>
+
+            <!-- Custom Core Services Link Hub with Internal Links Relevance -->
+            <div>
+                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Our Luxury Services</h4>
+                <ul class="space-y-3 font-medium text-[11px] uppercase text-zinc-400">
+                    <li><a href="service.html" class="hover:text-white transition">Private Luxury Shuttle</a></li>
+                    <li><a href="service.html" class="hover:text-white transition">Heathrow Airport Transfer</a>
+                    </li>
+                    <li><a href="service.html" class="hover:text-white transition">Gatwick Airport Transfer</a></li>
+                    <li><a href="service.html" class="hover:text-white transition">Stansted Airport Transfer</a>
+                    </li>
+                    <li><a href="service.html" class="hover:text-white transition">London City Airport Service</a></li>
+                    <li><a href="service.html" class="hover:text-white transition">Luton Airport Transfer</a></li>
+                </ul>
+            </div>
+
+            <!-- Fleet Redirection Matrix Connected internally -->
+            <div>
+                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Fleet Segments</h4>
+                <ul class="space-y-3 font-medium text-[11px] uppercase text-zinc-400">
+                    <li><a href="fleet.html" class="hover:text-white transition">Mercedes E-Class</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Mercedes S-Class</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Mercedes V-Class</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Mercedes Vito</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Sprinter VIP 6-Seater</a></li>
+                    <li><a href="fleet.html" class="hover:text-white transition">Sprinter Cargo 8-Seater</a></li>
+                </ul>
+            </div>
+
+            <!-- Connections Panel with Social Media Icons -->
+            <div>
+                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Terminal Connection</h4>
+                <ul class="space-y-3 text-zinc-400 font-light text-[11px] mb-5">
+                    <li class="flex items-center space-x-2">
+                        <span>📞</span> <a href="tel:+442038277777"
+                            class="text-white font-medium hover:text-white transition">+44 203 827 7777</a>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span>📧</span> <span
+                            class="hover:text-white transition">bookings@londonprestigechauffeur.com</span>
+                    </li>
+                    <li class="flex items-start space-x-2 leading-relaxed">
+                        <span>📍</span> <span>Airport Luggage Van,<br>London, CR7 8DP</span>
+                    </li>
+                </ul>
+
+                <!-- Social Media Grid -->
+                <div class="flex items-center space-x-4 border-t border-zincBorder/30 pt-4">
+                    <a href="https://www.facebook.com/londonprestigechauffeur" target="_blank" rel="noopener noreferrer"
+                        class="text-zinc-400 hover:text-white transition duration-300" aria-label="Facebook Profile">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/londonprestigechauffeur" target="_blank"
+                        rel="noopener noreferrer" class="text-zinc-400 hover:text-white transition duration-300"
+                        aria-label="Instagram Profile">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-zincBorder border-opacity-20 pt-8 text-center text-[10px] font-light text-zinc-600 uppercase tracking-[0.2em]">
+            &copy; 2026 London Prestige Chauffeur. Managed with absolute security and discretion.
+        </div>
+    </footer>
+
+    <!-- Initialize AOS & Slider Controls -->
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.fade-slide');
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 7000);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPath = window.location.pathname.split('/').pop();
+            if (currentPath === '') { currentPath = 'index.html'; }
+
+            var navLinks = document.querySelectorAll('header nav a, .nav-links a');
+            navLinks.forEach(function (link) {
+                var linkPath = link.getAttribute('href');
+                if (linkPath === currentPath) {
+                    link.classList.add('text-gold', 'border-b', 'border-gold');
+                    link.classList.remove('text-zinc-400', 'text-white');
+                } else {
+                    link.classList.remove('text-gold', 'border-b', 'border-gold');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
