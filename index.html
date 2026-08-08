@@ -53,73 +53,7 @@
             }
         }
     </style>
-    <style>
-        /* --- 1. Business Name & Navigation Spacing Fix --- */
-        .logo-container,
-        .brand-name {
-            margin-right: 35px !important;
-            /* HOME link se gap banane ke liye */
-            padding-right: 15px;
-        }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 22px;
-            /* Link ke apas mein gap */
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* --- 2. Compact Dark Luxury Language Selector --- */
-        .header-right-actions {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .custom-language-selector {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            background: #111111;
-            border: 1px solid #333333;
-            border-radius: 4px;
-            padding: 4px 8px;
-            transition: all 0.3s ease;
-        }
-
-        .custom-language-selector:hover {
-            border-color: #c5a880;
-            /* Gold Highlight */
-        }
-
-        .custom-language-selector .globe-icon {
-            font-size: 13px;
-            margin-right: 5px;
-            color: #c5a880;
-        }
-
-        .custom-language-selector select {
-            background: transparent;
-            color: #ffffff;
-            border: none;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            cursor: pointer;
-            outline: none;
-            padding-right: 4px;
-        }
-
-        /* Dropdown options dark background */
-        .custom-language-selector select option {
-            background-color: #111111;
-            color: #ffffff;
-            padding: 8px;
-        }
-    </style>
 </head>
 
 <body class="bg-darkBg text-zinc-300 font-sans antialiased selection:bg-white selection:text-black overflow-x-hidden">
@@ -149,50 +83,55 @@
                 <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
                     class="h-16 sm:h-20 w-auto object-contain transition duration-300 group-hover:scale-105">
                 <div class="flex flex-col border-l border-zincBorder pl-3 py-0.5">
-                    <span class="text-xs sm:text-sm font-serif font-bold tracking-[0.2em] text-white uppercase">Airport
+                    <span
+                        class="text-xs sm:text-sm font-serif font-bold tracking-[0.2em] text-white uppercase leading-tight">
+                        Airport
+                    </span>
+                    <span
+                        class="text-xs sm:text-sm font-serif font-bold tracking-[0.2em] text-white uppercase leading-tight">
                         Luggage Van
                     </span>
-
                 </div>
             </a>
 
-            <!-- Navigation Links -->
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="services.html">OUR SERVICES</a></li>
-                <li><a href="fleet.html">OUR FLEET</a></li>
-                <li><a href="worldwide.html">WORLDWIDE</a></li>
-                <li><a href="booking.html">BOOK NOW</a></li>
-                <li><a href="contact.html">CONTACT DESK</a></li>
-            </ul>
+            <nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-[0.15em] font-medium">
+                <a href="index.html" class="text-white border-b border-white pb-1">Home</a>
+                <a href="about.html" class="hover:text-white transition text-zinc-400">About Us</a>
+                <a href="service.html" class="hover:text-white transition text-zinc-400">Our Services</a>
+                <a href="fleet.html" class="hover:text-white transition text-zinc-400">Our Fleet</a>
+                <a href="worldwide.html" class="hover:text-white transition text-zinc-400">Worldwide</a>
+                <a href="booking.html"
+                    class="text-[11px] uppercase tracking-widest text-zinc-400 hover:text-white transition">Book Now</a>
+                <a href="contact.html" class="hover:text-white transition text-zinc-400">Contact Desk</a>
+            </nav>
 
-            <!-- Phone & Compact Language Dropdown -->
-            <div class="header-right-actions">
-                <a href="tel:+442038277777" class="phone-btn">
-                    <i class="fas fa-phone-alt"></i> +44 203 827 7777
+            <!-- Responsive Phone Call Trigger -->
+            <div
+                class="flex items-center space-x-2 border border-zincBorder px-3 py-2 bg-zinc-900 hover:border-white transition">
+                <span class="text-xs">📞</span>
+                <a href="tel:+442038277777" class="text-[10px] text-white uppercase tracking-widest font-bold">
+                    +44 203 827 7777
                 </a>
-
-                <!-- Compact Luxury Language Selector -->
-                <div class="custom-language-selector">
-                    <span class="globe-icon">🌐</span>
-                    <select id="languageSelect" onchange="translatePage(this.value)">
-                        <option value="">EN</option>
-                        <option value="en">English (UK/US)</option>
-                        <option value="zh-CN">Chinese</option>
-                        <option value="tr">Turkish</option>
-                        <option value="ko">Korean</option>
-                        <option value="ja">Japanese</option>
-                        <option value="fa">Persian</option>
-                        <option value="ar">Arabic</option>
-                        <option value="hi">Hindi</option>
-                        <option value="ur">Urdu</option>
-                        <option value="it">Italian</option>
-                    </select>
-                </div>
-                <div id="google_translate_element" style="display:none;"></div>
-
             </div>
+            <!-- Custom Clean Language Selector -->
+            <div class="custom-language-selector">
+                <select id="languageSelect" onchange="translatePage(this.value)">
+                    <option value="">Select Language</option>
+                    <option value="en">English (UK / US)</option>
+                    <option value="zh-CN">Chinese (Simplified)</option>
+                    <option value="tr">Turkish</option>
+                    <option value="ko">Korean</option>
+                    <option value="ja">Japanese</option>
+                    <option value="fa">Persian (Farsi)</option>
+                    <option value="ar">Arabic</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ur">Urdu</option>
+                    <option value="it">Italian</option>
+                </select>
+            </div>
+            <div id="google_translate_element" style="display:none;"></div>
+
+        </div>
         </div>
     </header>
 
