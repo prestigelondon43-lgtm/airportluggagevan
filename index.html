@@ -93,6 +93,82 @@
             color: #ffffff;
             padding: 8px;
         }
+
+        /* Banner Container Link Style */
+        .chauffeur-banner-link {
+            text-decoration: none;
+            display: block;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        /* Banner Styling */
+        .chauffeur-banner {
+            background: linear-gradient(135deg, #111111, #222222);
+            border: 1px solid #d4af37;
+            /* Gold border theme */
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            /* Animation Effect */
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+
+        /* Text Styling */
+        .chauffeur-content h2 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+
+        .chauffeur-content p {
+            color: #d4af37;
+            /* Gold accent color */
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* Hover Effect */
+        .chauffeur-banner:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Continuous Pulse/Glow Animation */
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .chauffeur-content h2 {
+                font-size: 22px;
+            }
+
+            .chauffeur-content p {
+                font-size: 14px;
+            }
+        }
     </style>
 
 </head>
@@ -252,429 +328,277 @@
         </div>
     </section>
 
-    <section id="services" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <span class="text-white text-xs uppercase tracking-[0.3em] font-semibold block mb-2">Our Operational
-                Specialities</span>
-            <h2 class="text-2xl sm:text-3xl font-serif font-light text-white uppercase tracking-wider">Luxury Cargo &
-                <span class="italic text-white">Chauffeur Services</span>
-            </h2>
-            <div class="w-12 h-[1px] bg-white mx-auto mt-4"></div>
+    <!-- Chauffeur Prompt Section -->
+    <a href="https://prestigechauffeurlondon.com/fleet/" class="chauffeur-banner-link">
+        <div class="chauffeur-banner">
+            <div class="chauffeur-content">
+                <h2>Do you need a chauffeur?</h2>
+                <p>Explore Our Luxury Fleet &rarr;</p>
+            </div>
         </div>
+    </a>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="100">
-                <div class="h-64 overflow-hidden relative">
-                    <img src="Private Shuttle Services.jpg" alt="Private Shuttle Services"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <h3 id="service-shuttle" class="text-base font-serif uppercase tracking-widest text-white">Private
-                        Luxury Shuttle</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        Designed for corporate teams and premium families traveling with substantial baggage capacities.
-                        Flawless sync between arrival protocols and custom drop schedules.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#shuttle"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Explore Grid Details</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="200">
-                <div class="h-64 overflow-hidden relative">
-                    <img src="secramanto international airport.jpg" alt="International Terminal Logistics"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <h3 id="service-inter" class="text-base font-serif uppercase tracking-widest text-white">
-                        International Terminal Matrix</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        Complete meet and greet coordination across all major London airline hubs. Includes flight
-                        tracking protocols, flight delay padding, and instant luggage assistance.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#terminals"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Explore Grid Details</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="300">
-                <div class="h-64 overflow-hidden relative">
-                    <img src="01.jpg" alt="VIP Jet Luggage Logistics"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <h3 id="service-vip" class="text-base font-serif uppercase tracking-widest text-white">VIP Cargo &
-                        Jet Centric</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        High-security cargo vans operating seamlessly with private aviation terminals. Direct airside
-                        protocols managing diplomatic, royal, and high-net-worth individual luggage safely.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#vip"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Explore Grid Details</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        <!-- ================= DEDICATED ALL LONDON AIRPORTS ADDITION ================= -->
-        <div class="text-center mt-24 mb-16" data-aos="fade-up">
-            <span class="text-white text-xs uppercase tracking-[0.3em] font-semibold block mb-2">Targeted Transfer
-                Hubs</span>
-            <h3 class="text-2xl font-serif font-light text-white uppercase tracking-wider">Major London Airport <span
-                    class="italic text-white">Coverages</span></h3>
-            <div class="w-12 h-[1px] bg-white mx-auto mt-4"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- Heathrow Airport (LHR) -->
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="100">
-                <div class="h-60 overflow-hidden relative">
-                    <img src="heathrow airport.jpg" alt="Heathrow Airport Luggage Van Service"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Terminal 2, 3, 4 & 5</div>
-                    <h4 id="service-heathrow" class="text-base font-serif uppercase tracking-widest text-white">Heathrow
-                        Airport Transfer</h4>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        Premium van deployment tailored for Heathrow's extensive terminal structures. Includes dedicated
-                        flight monitoring and immediate curb-side luggage clearance.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#heathrow"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Book LHR Transfer</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Gatwick Airport (LGW) -->
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="200">
-                <div class="h-60 overflow-hidden relative">
-                    <img src="getwick airport.jpg" alt="Gatwick Airport Luggage Van Service"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">North & South Terminals</div>
-                    <h4 id="service-gatwick" class="text-base font-serif uppercase tracking-widest text-white">Gatwick
-                        Airport Transfer</h4>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        Effortless high-capacity transit servicing both Gatwick terminals. Optimized routes ensure
-                        timely arrivals for large groups with extensive luggage allowances.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#gatwick"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Book LGW Transfer</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Stansted Airport (STN) -->
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="300">
-                <div class="h-60 overflow-hidden relative">
-                    <img src="stn airport.jpg" alt="Stansted Airport Luggage Van Service"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Main Passenger Terminal</div>
-                    <h4 id="service-stansted" class="text-base font-serif uppercase tracking-widest text-white">Stansted
-                        Airport Transfer</h4>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        Strategic heavy-luggage management catering to international flights. Smooth coordination from
-                        flight touchdown to secure destination drop-off.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#stansted"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Book STN Transfer</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- London City Airport (LCY) -->
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="400">
-                <div class="h-60 overflow-hidden relative">
-                    <img src="luton city hub.jpg" alt="London City Airport Chauffeur Van"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Corporate & Business Hub
-                    </div>
-                    <h4 id="service-city" class="text-base font-serif uppercase tracking-widest text-white">London City
-                        Airport Service</h4>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        Sleek, rapid business logistics optimized for the heart of London. Ideal for executive teams
-                        requiring fast, synchronized bulk baggage ground transfers.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#city"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Book LCY Transfer</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Luton Airport (LTN) -->
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="500">
-                <div class="h-60 overflow-hidden relative">
-                    <img src="luton airport.jpg" alt="Luton Airport Luggage Chauffeur"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Executive & Commercial Hub
-                    </div>
-                    <h4 id="service-luton" class="text-base font-serif uppercase tracking-widest text-white">Luton
-                        Airport Transfer</h4>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        Reliable fleet logistics covering both private executive runways and commercial terminals.
-                        Seamless handling of massive family or touring equipment weight.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#luton"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Book LTN Transfer</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Southend Airport (SEN) -->
-            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
-                data-aos="fade-up" data-aos-delay="600">
-                <div class="h-60 overflow-hidden relative">
-                    <img src="southend.jpg" alt="Southend Airport Luggage Transfer"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                </div>
-                <div class="p-6 space-y-3">
-                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Regional & Int Terminal</div>
-                    <h4 id="service-southend" class="text-base font-serif uppercase tracking-widest text-white">Southend
-                        Airport Transfer</h4>
-                    <p class="text-xs text-zinc-400 leading-relaxed">
-                        Extended luxury ground coverage connecting Southend to any central London postcode. Fixed
-                        premium rates for ultimate luggage transit predictability.
-                    </p>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="service.html#southend"
-                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
-                        <span>Book SEN Transfer</span> <span>&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================= FULL 6-FLEET INTERACTIVE ANIMATED SECTIONS (AIRPORT LUGGAGE VANS) ================= -->
-    <section id="fleet" class="py-24 bg-black/40 border-t border-b border-zincBorder border-opacity-30">
+    <!-- ================= FULL 6-FLEET INTERACTIVE ANIMATED SECTION (AIRPORT LUGGAGE VANS) ================= -->
+    <section id="fleet" class="py-24 bg-black/40 border-t border-b border-zincBorder/40 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- SECTION HEADER -->
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-white text-xs uppercase tracking-[0.3em] font-semibold block mb-2">The High-Capacity
-                    Fleet Standard</span>
-                <h2 class="text-2xl sm:text-3xl font-serif font-light text-white uppercase tracking-wider">Airport
-                    Luggage
-                    <span class="italic text-white">Fleet</span>
+                <span class="text-gold text-xs uppercase tracking-[0.3em] font-semibold block mb-2">
+                    High-Capacity Luggage Logistics
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-serif font-light text-white uppercase tracking-wider">
+                    Airport Luggage <span class="italic text-gold">Fleet</span>
                 </h2>
-                <div class="w-12 h-[1px] bg-white mx-auto mt-4"></div>
+                <div class="w-16 h-[1px] bg-gold/60 mx-auto mt-4"></div>
             </div>
 
+            <!-- 6-VEHICLE GRID -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Vehicle 1: Mercedes V-Class Luggage -->
-                <div class="bg-cardBg border border-zincBorder group overflow-hidden flex flex-col justify-between"
+                <!-- Vehicle 1: Mercedes V-Class VIP -->
+                <div class="bg-cardBg border border-zincBorder/60 group overflow-hidden flex flex-col justify-between transition-all duration-500 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/5"
                     data-aos="fade-up" data-aos-delay="100">
                     <div>
-                        <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="van 1.jpg" alt="Mercedes V-Class Luggage"
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
+                        <div class="h-64 overflow-hidden relative bg-black">
+                            <img src="1_2.jpeg" alt="Mercedes VIP Executive Luggage Vans" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-black/80 text-gold border border-gold/30 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1">
+                                VIP Executive
+                            </span>
                         </div>
                         <div class="p-6">
-                            <h3 id="fleet-vclass" class="text-sm font-serif uppercase tracking-widest text-white mb-1">
-                                Mercedes V-Class VIP</h3>
-                            <p class="text-[10px] text-gold uppercase tracking-widest mb-4">Executive VIP MPV
+                            <h3 id="fleet-vclass"
+                                class="text-base font-serif uppercase tracking-wider text-white mb-1 group-hover:text-gold transition duration-300">
+                                Mercedes V-Class VIP
+                            </h3>
+                            <p class="text-[11px] text-zinc-400 uppercase tracking-widest mb-4">
+                                Executive Passenger & Baggage Transport
                             </p>
                             <div
-                                class="bg-zinc-900 border border-zincBorder/40 px-3 py-2 flex justify-between text-xs text-white">
-                                <span>👤 Pax: 6 Max</span>
-                                <span>🧳 Luggage: 7-8 Cases</span>
+                                class="bg-zinc-950/80 border border-zincBorder/50 px-4 py-3 flex justify-between text-xs text-zinc-300">
+                                <span class="flex items-center gap-1.5"><strong class="text-white">Pax:</strong> 6
+                                    Max</span>
+                                <span class="text-zinc-600">|</span>
+                                <span class="flex items-center gap-1.5"><strong class="text-gold">Luggage:</strong> 7-8
+                                    Cases</span>
                             </div>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
                         <a href="booking.html?vehicle=v-class-vip"
-                            class="block w-full bg-zinc-900 group-hover:bg-gold text-white group-hover:text-black uppercase text-center py-3 text-[10px] tracking-widest font-bold transition duration-300">Book
-                            Vehicle</a>
+                            class="block w-full bg-zinc-900 border border-zincBorder text-white group-hover:bg-gold group-hover:text-black group-hover:border-gold uppercase text-center py-3 text-[11px] tracking-widest font-bold transition-all duration-300">
+                            Book Vehicle &rarr;
+                        </a>
                     </div>
                 </div>
 
                 <!-- Vehicle 2: Mercedes Vito MWB Cargo -->
-                <div class="bg-cardBg border border-zincBorder group overflow-hidden flex flex-col justify-between"
+                <div class="bg-cardBg border border-zincBorder/60 group overflow-hidden flex flex-col justify-between transition-all duration-500 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/5"
                     data-aos="fade-up" data-aos-delay="200">
                     <div>
-                        <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="van 2.jpg" alt="Mercedes Vito MWB Cargo"
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
+                        <div class="h-64 overflow-hidden relative bg-black">
+                            <img src="2_2.jpeg" alt="Mercedes Vito MWB Luggage Van Fleet" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-black/80 text-gold border border-gold/30 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1">
+                                Medium Luggage
+                            </span>
                         </div>
                         <div class="p-6">
-                            <h3 id="fleet-vito" class="text-sm font-serif uppercase tracking-widest text-white mb-1">
-                                Mercedes Vito MWB Cargo</h3>
-                            <p class="text-[10px] text-zinc-400 uppercase tracking-widest mb-4">Dedicated Luggage
-                                Specialist</p>
+                            <h3 id="fleet-vito"
+                                class="text-base font-serif uppercase tracking-wider text-white mb-1 group-hover:text-gold transition duration-300">
+                                Mercedes Vito MWB
+                            </h3>
+                            <p class="text-[11px] text-zinc-400 uppercase tracking-widest mb-4">
+                                Dedicated Baggage Specialist
+                            </p>
                             <div
-                                class="bg-zinc-900 border border-zincBorder/40 px-3 py-2 flex justify-between text-xs text-white">
-                                <span>👤 Pax: 2 Max</span>
-                                <span>🧳 Luggage: 12-15 Cases</span>
+                                class="bg-zinc-950/80 border border-zincBorder/50 px-4 py-3 flex justify-between text-xs text-zinc-300">
+                                <span class="flex items-center gap-1.5"><strong class="text-white">Pax:</strong> 2
+                                    Max</span>
+                                <span class="text-zinc-600">|</span>
+                                <span class="flex items-center gap-1.5"><strong class="text-gold">Luggage:</strong>
+                                    12-15 Cases</span>
                             </div>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
                         <a href="booking.html?vehicle=vito-mwb"
-                            class="block w-full bg-zinc-900 group-hover:bg-gold text-white group-hover:text-black uppercase text-center py-3 text-[10px] tracking-widest font-bold transition duration-300">Book
-                            Vehicle</a>
+                            class="block w-full bg-zinc-900 border border-zincBorder text-white group-hover:bg-gold group-hover:text-black group-hover:border-gold uppercase text-center py-3 text-[11px] tracking-widest font-bold transition-all duration-300">
+                            Book Vehicle &rarr;
+                        </a>
                     </div>
                 </div>
 
                 <!-- Vehicle 3: Sprinter LWB Heavy Cargo -->
-                <div class="bg-cardBg border border-zincBorder group overflow-hidden flex flex-col justify-between"
+                <div class="bg-cardBg border border-zincBorder/60 group overflow-hidden flex flex-col justify-between transition-all duration-500 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/5"
                     data-aos="fade-up" data-aos-delay="300">
                     <div>
-                        <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="van 3.jpg" alt="Sprinter LWB Heavy Cargo"
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
+                        <div class="h-64 overflow-hidden relative bg-black">
+                            <img src="3_2.jpeg" alt="Sprinter LWB High Roof Luggage Van" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-black/80 text-gold border border-gold/30 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1">
+                                Heavy Payload
+                            </span>
                         </div>
                         <div class="p-6">
-                            <h3 id="fleet-heavy" class="text-sm font-serif uppercase tracking-widest text-white mb-1">
-                                Sprinter LWB Heavy</h3>
-                            <p class="text-[10px] text-gold uppercase tracking-widest mb-4">LWB High Roof Cargo</p>
+                            <h3 id="fleet-heavy"
+                                class="text-base font-serif uppercase tracking-wider text-white mb-1 group-hover:text-gold transition duration-300">
+                                Sprinter LWB Heavy
+                            </h3>
+                            <p class="text-[11px] text-zinc-400 uppercase tracking-widest mb-4">
+                                LWB High Roof Heavy Cargo
+                            </p>
                             <div
-                                class="bg-zinc-900 border border-zincBorder/40 px-3 py-2 flex justify-between text-xs text-white">
-                                <span>👤 Pax: 3 Max</span>
-                                <span>🧳 Luggage: 25+ Cases</span>
+                                class="bg-zinc-950/80 border border-zincBorder/50 px-4 py-3 flex justify-between text-xs text-zinc-300">
+                                <span class="flex items-center gap-1.5"><strong class="text-white">Pax:</strong> 3
+                                    Max</span>
+                                <span class="text-zinc-600">|</span>
+                                <span class="flex items-center gap-1.5"><strong class="text-gold">Luggage:</strong> 25+
+                                    Cases</span>
                             </div>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
                         <a href="booking.html?vehicle=sprinter-lwb-heavy"
-                            class="block w-full bg-zinc-900 group-hover:bg-gold text-white group-hover:text-black uppercase text-center py-3 text-[10px] tracking-widest font-bold transition duration-300">Book
-                            Vehicle</a>
+                            class="block w-full bg-zinc-900 border border-zincBorder text-white group-hover:bg-gold group-hover:text-black group-hover:border-gold uppercase text-center py-3 text-[11px] tracking-widest font-bold transition-all duration-300">
+                            Book Vehicle &rarr;
+                        </a>
                     </div>
                 </div>
 
-                <!-- Vehicle 4: Sprinter LWB Shuttle -->
-                <div class="bg-cardBg border border-zincBorder group overflow-hidden flex flex-col justify-between"
+                <!-- Vehicle 4: Sprinter LWB Shuttle (Open Cargo Interior View) -->
+                <div class="bg-cardBg border border-zincBorder/60 group overflow-hidden flex flex-col justify-between transition-all duration-500 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/5"
                     data-aos="fade-up" data-aos-delay="400">
                     <div>
-                        <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="van4.jpg" alt="Sprinter LWB Shuttle"
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
+                        <div class="h-64 overflow-hidden relative bg-black">
+                            <img src="4_2.jpeg" alt="Sprinter Massive Interior Luggage Capacity" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-black/80 text-gold border border-gold/30 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1">
+                                Group Shuttle
+                            </span>
                         </div>
                         <div class="p-6">
-                            <h3 id="fleet-shuttle" class="text-sm font-serif uppercase tracking-widest text-white mb-1">
-                                Sprinter LWB Shuttle</h3>
-                            <p class="text-[10px] text-zinc-400 uppercase tracking-widest mb-4">Executive Luggage
-                                Shuttle
+                            <h3 id="fleet-shuttle"
+                                class="text-base font-serif uppercase tracking-wider text-white mb-1 group-hover:text-gold transition duration-300">
+                                Sprinter LWB Shuttle
+                            </h3>
+                            <p class="text-[11px] text-zinc-400 uppercase tracking-widest mb-4">
+                                Deep Cargo Bay & Shuttle Space
                             </p>
                             <div
-                                class="bg-zinc-900 border border-zincBorder/40 px-3 py-2 flex justify-between text-xs text-white">
-                                <span>👤 Pax: 8 Max</span>
-                                <span>🧳 Luggage: 15-20 Cases</span>
+                                class="bg-zinc-950/80 border border-zincBorder/50 px-4 py-3 flex justify-between text-xs text-zinc-300">
+                                <span class="flex items-center gap-1.5"><strong class="text-white">Pax:</strong> 8
+                                    Max</span>
+                                <span class="text-zinc-600">|</span>
+                                <span class="flex items-center gap-1.5"><strong class="text-gold">Luggage:</strong>
+                                    15-20 Cases</span>
                             </div>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
                         <a href="booking.html?vehicle=sprinter-shuttle"
-                            class="block w-full bg-zinc-900 group-hover:bg-gold text-white group-hover:text-black uppercase text-center py-3 text-[10px] tracking-widest font-bold transition duration-300">Book
-                            Vehicle</a>
+                            class="block w-full bg-zinc-900 border border-zincBorder text-white group-hover:bg-gold group-hover:text-black group-hover:border-gold uppercase text-center py-3 text-[11px] tracking-widest font-bold transition-all duration-300">
+                            Book Vehicle &rarr;
+                        </a>
                     </div>
                 </div>
 
-                <!-- Vehicle 5: Sprinter XLWB Ultra Cargo -->
-                <div class="bg-cardBg border border-zincBorder group overflow-hidden flex flex-col justify-between"
+                <!-- Vehicle 5: Sprinter XLWB Cargo (Rear Open Door View) -->
+                <div class="bg-cardBg border border-zincBorder/60 group overflow-hidden flex flex-col justify-between transition-all duration-500 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/5"
                     data-aos="fade-up" data-aos-delay="500">
                     <div>
-                        <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="mercedes sprinter.jpg" alt="Sprinter XLWB Ultra Cargo"
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
+                        <div class="h-64 overflow-hidden relative bg-black">
+                            <img src="5_2.jpeg" alt="Sprinter XLWB Rear Cargo Space" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-black/80 text-gold border border-gold/30 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1">
+                                Ultra Capacity
+                            </span>
                         </div>
                         <div class="p-6">
-                            <h3 id="fleet-xlwb" class="text-sm font-serif uppercase tracking-widest text-white mb-1">
+                            <h3 id="fleet-xlwb"
+                                class="text-base font-serif uppercase tracking-wider text-white mb-1 group-hover:text-gold transition duration-300">
                                 Sprinter XLWB Cargo
                             </h3>
-                            <p class="text-[10px] text-gold uppercase tracking-widest mb-4">Extra Long Wheelbase
+                            <p class="text-[11px] text-zinc-400 uppercase tracking-widest mb-4">
+                                Extra-Long Wheelbase Bulk Transit
                             </p>
                             <div
-                                class="bg-zinc-900 border border-zincBorder/40 px-3 py-2 flex justify-between text-xs text-white">
-                                <span>👤 Pax: 3 Max</span>
-                                <span>🧳 Luggage: 30+ Cases</span>
+                                class="bg-zinc-950/80 border border-zincBorder/50 px-4 py-3 flex justify-between text-xs text-zinc-300">
+                                <span class="flex items-center gap-1.5"><strong class="text-white">Pax:</strong> 3
+                                    Max</span>
+                                <span class="text-zinc-600">|</span>
+                                <span class="flex items-center gap-1.5"><strong class="text-gold">Luggage:</strong> 30+
+                                    Cases</span>
                             </div>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
                         <a href="booking.html?vehicle=sprinter-xlwb"
-                            class="block w-full bg-zinc-900 group-hover:bg-gold text-white group-hover:text-black uppercase text-center py-3 text-[10px] tracking-widest font-bold transition duration-300">Book
-                            Vehicle</a>
+                            class="block w-full bg-zinc-900 border border-zincBorder text-white group-hover:bg-gold group-hover:text-black group-hover:border-gold uppercase text-center py-3 text-[11px] tracking-widest font-bold transition-all duration-300">
+                            Book Vehicle &rarr;
+                        </a>
                     </div>
                 </div>
 
-                <!-- Vehicle 6: Sprinter Max Freight Carrier -->
-                <div class="bg-cardBg border border-zincBorder group overflow-hidden flex flex-col justify-between"
+                <!-- Vehicle 6: Sprinter Max Freight (Extra Long Side View) -->
+                <div class="bg-cardBg border border-zincBorder/60 group overflow-hidden flex flex-col justify-between transition-all duration-500 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/5"
                     data-aos="fade-up" data-aos-delay="600">
                     <div>
-                        <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="sprinter benz.jpg" alt="Sprinter Max Freight"
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
+                        <div class="h-64 overflow-hidden relative bg-black">
+                            <img src="6_2.jpeg" alt="Sprinter Max Freight Long Wheelbase" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-black/80 text-gold border border-gold/30 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1">
+                                Maximum Freight
+                            </span>
                         </div>
                         <div class="p-6">
-                            <h3 id="fleet-freight" class="text-sm font-serif uppercase tracking-widest text-white mb-1">
+                            <h3 id="fleet-freight"
+                                class="text-base font-serif uppercase tracking-wider text-white mb-1 group-hover:text-gold transition duration-300">
                                 Sprinter Max Freight
                             </h3>
-                            <p class="text-[10px] text-gold uppercase tracking-widest mb-4">Commercial Payload King</p>
+                            <p class="text-[11px] text-zinc-400 uppercase tracking-widest mb-4">
+                                Commercial Heavy Payload King
+                            </p>
                             <div
-                                class="bg-zinc-900 border border-zincBorder/40 px-3 py-2 flex justify-between text-xs text-white">
-                                <span>👤 Pax: 3 Max</span>
-                                <span>🧳 Luggage: 35+ Cases</span>
+                                class="bg-zinc-950/80 border border-zincBorder/50 px-4 py-3 flex justify-between text-xs text-zinc-300">
+                                <span class="flex items-center gap-1.5"><strong class="text-white">Pax:</strong> 3
+                                    Max</span>
+                                <span class="text-zinc-600">|</span>
+                                <span class="flex items-center gap-1.5"><strong class="text-gold">Luggage:</strong> 35+
+                                    Cases</span>
                             </div>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
                         <a href="booking.html?vehicle=sprinter-max-freight"
-                            class="block w-full bg-zinc-900 group-hover:bg-gold text-white group-hover:text-black uppercase text-center py-3 text-[10px] tracking-widest font-bold transition duration-300">Book
-                            Vehicle</a>
+                            class="block w-full bg-zinc-900 border border-zincBorder text-white group-hover:bg-gold group-hover:text-black group-hover:border-gold uppercase text-center py-3 text-[11px] tracking-widest font-bold transition-all duration-300">
+                            Book Vehicle &rarr;
+                        </a>
                     </div>
                 </div>
 
@@ -690,10 +614,12 @@
             <div class="space-y-4">
                 <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
                     class="h-36 w-auto object-contain mb-2 transition duration-300 hover:scale-105">
-                <p class="leading-relaxed text-zinc-400 font-light text-[11px]">Elite multi-capacity travel coordination
+                <p class="leading-relaxed text-zinc-400 font-light text-[11px]">Elite multi-capacity travel
+                    coordination
                     engineered for critical airport baggage allowances and luxurious group logistics.</p>
                 <div class="border border-zincBorder p-3 bg-zinc-900/40 inline-block">
-                    <p class="text-[10px] text-white font-medium uppercase tracking-widest">🛡️ Regulated by TFL & PCO
+                    <p class="text-[10px] text-white font-medium uppercase tracking-widest">🛡️ Regulated by TFL &
+                        PCO
                     </p>
                     <p class="text-[9px] text-white mt-1">License No: 11678</p>
                 </div>
@@ -709,7 +635,8 @@
                     <li><a href="service.html" class="hover:text-white transition">Gatwick Airport Transfer</a></li>
                     <li><a href="service.html" class="hover:text-white transition">Stansted Airport Transfer</a>
                     </li>
-                    <li><a href="service.html" class="hover:text-white transition">London City Airport Service</a></li>
+                    <li><a href="service.html" class="hover:text-white transition">London City Airport Service</a>
+                    </li>
                     <li><a href="service.html" class="hover:text-white transition">Luton Airport Transfer</a></li>
                 </ul>
             </div>
