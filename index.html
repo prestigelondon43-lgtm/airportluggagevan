@@ -295,31 +295,54 @@
                 <h3
                     class="text-sm font-serif uppercase tracking-[0.2em] text-white mb-6 border-b border-zincBorder pb-3">
                     Secure Flight Dispatch</h3>
-                <form action="booking.html" method="GET" class="space-y-4 text-xs">
+                <form action="send-quote.php" method="POST" class="space-y-4 text-xs">
+                    <!-- Pickup Location -->
                     <div>
                         <label class="block text-zinc-400 uppercase tracking-widest mb-1.5 font-medium">Pickup
                             Location</label>
-                        <input type="text" placeholder="Airport, Terminal or Address"
+                        <input type="text" name="pickup_location" placeholder="Airport, Terminal or Address" required
                             class="w-full bg-zinc-900 border border-zincBorder px-4 py-3 text-white focus:border-white outline-none tracking-wide transition">
                     </div>
+
+                    <!-- Drop-off Destination -->
                     <div>
                         <label class="block text-zinc-400 uppercase tracking-widest mb-1.5 font-medium">Drop-off
                             Destination</label>
-                        <input type="text" placeholder="Hotel, Port or Postcode"
+                        <input type="text" name="dropoff_location" placeholder="Hotel, Port or Postcode" required
                             class="w-full bg-zinc-900 border border-zincBorder px-4 py-3 text-white focus:border-white outline-none tracking-wide transition">
                     </div>
+
+                    <!-- Date & Time -->
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-zinc-400 uppercase tracking-widest mb-1.5 font-medium">Date</label>
-                            <input type="date"
+                            <input type="date" name="pickup_date" required
                                 class="w-full bg-zinc-900 border border-zincBorder px-4 py-3 text-white focus:border-white outline-none">
                         </div>
                         <div>
                             <label class="block text-zinc-400 uppercase tracking-widest mb-1.5 font-medium">Time</label>
-                            <input type="time"
+                            <input type="time" name="pickup_time" required
                                 class="w-full bg-zinc-900 border border-zincBorder px-4 py-3 text-white focus:border-white outline-none">
                         </div>
                     </div>
+
+                    <!-- Customer Email & Phone (Quote Response ke liye) -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-zinc-400 uppercase tracking-widest mb-1.5 font-medium">Your
+                                Email</label>
+                            <input type="email" name="customer_email" placeholder="name@example.com" required
+                                class="w-full bg-zinc-900 border border-zincBorder px-4 py-3 text-white focus:border-white outline-none tracking-wide transition">
+                        </div>
+                        <div>
+                            <label class="block text-zinc-400 uppercase tracking-widest mb-1.5 font-medium">Phone
+                                Number</label>
+                            <input type="tel" name="customer_phone" placeholder="+44 7000 000000" required
+                                class="w-full bg-zinc-900 border border-zincBorder px-4 py-3 text-white focus:border-white outline-none tracking-wide transition">
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
                     <button type="submit"
                         class="w-full bg-white text-black uppercase tracking-[0.25em] font-bold py-4 hover:bg-gold hover:text-black transition duration-300 mt-2">
                         Calculate Instant Quote
@@ -689,8 +712,7 @@
                             class="text-white font-medium hover:text-white transition">+44 203 827 7777</a>
                     </li>
                     <li class="flex items-center space-x-2">
-                        <span>📧</span> <span
-                            class="hover:text-white transition">bookings@airportluggagevan.com</span>
+                        <span>📧</span> <span class="hover:text-white transition">bookings@airportluggagevan.com</span>
                     </li>
                     <li class="flex items-start space-x-2 leading-relaxed">
                         <span>📍</span> <span>Airport Luggage Van,<br>London, CR7 8DP</span>
