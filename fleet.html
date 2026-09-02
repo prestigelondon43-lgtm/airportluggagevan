@@ -228,6 +228,26 @@
             transform: scaleX(1);
             background: #d4af37;
         }
+
+        /* Fleet Hero Background Animation - Same as Booking */
+        @keyframes slowGrayscaleBg {
+            0% {
+                transform: scale(1.01);
+                filter: grayscale(100%) brightness(0.2);
+            }
+            50% {
+                transform: scale(1.05);
+                filter: grayscale(100%) brightness(0.28);
+            }
+            100% {
+                transform: scale(1.01);
+                filter: grayscale(100%) brightness(0.2);
+            }
+        }
+
+        .animate-booking-hero {
+            animation: slowGrayscaleBg 22s ease-in-out infinite;
+        }
     </style>
 
 </head>
@@ -356,15 +376,20 @@
     <!-- ================= MAIN FLEET CONTENT WITH FORM (WITHOUT GLOBAL HEADER/FOOTER) ================= -->
 
     <!-- HERO BLOCK WITH METICULOUS LOGISTICS NARRATIVE -->
-    <section class="relative py-24 border-b border-zincBorder bg-zinc-950">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+    <section class="relative py-28 border-b border-zincBorder overflow-hidden bg-black">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="theme1.jpg" alt="London Prestige Fleet Background"
+                class="w-full h-full object-cover animate-booking-hero">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center space-y-3">
             <span class="text-gold text-xs uppercase tracking-[0.3em] font-semibold block mb-3">Airport Luggage Fleet
                 Assets</span>
             <h1 class="text-3xl md:text-5xl font-serif font-light text-white uppercase tracking-wider">
                 The Executive <span class="italic text-white">Airport Baggage Fleet</span>
             </h1>
             <p class="text-zinc-500 text-[11px] uppercase tracking-widest mt-4 max-w-xl mx-auto leading-relaxed">
-                Every premium airport luggage van is fully licensed by TFL & PCO, maintaining sterile mechanical
+                Every premium airport luggage van is fully licensed by TFL &amp; PCO, maintaining sterile mechanical
                 protection, heavy baggage weight extensions, and climate-controlled cargo compartments.
             </p>
             <div class="w-12 h-[1px] bg-white mx-auto mt-6"></div>
