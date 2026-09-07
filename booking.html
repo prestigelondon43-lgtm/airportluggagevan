@@ -477,119 +477,259 @@
         </form>
     </section>
 
-    <!-- ================= BRAND FOOTER WITH LARGER LOGO & RELEVANT INTERNAL LINKS ================= -->
-    <footer class="bg-black border-t border-zincBorder border-opacity-40 py-16 text-zinc-500 text-xs tracking-wider">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                        <!-- ================= BRAND FOOTER WITH LARGER LOGO & RELEVANT INTERNAL LINKS ================= -->
+    <style>
+        .custom-footer {
+            background-color: #0b0b0b;
+            color: #a3a3a3;
+            font-family: 'Inter', sans-serif;
+            padding: 60px 20px 20px 20px;
+            border-top: 1px solid #1f1f1f;
+        }
+        .custom-footer a {
+            color: #a3a3a3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .custom-footer ul li a {
+            display: inline-block;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+        .custom-footer ul li a:hover {
+            color: #d4af37;
+            padding-left: 6px;
+        }
+        .custom-footer ul li a::before {
+            content: '— ';
+            color: #d4af37;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .custom-footer ul li a:hover::before {
+            opacity: 1;
+        }
+        .custom-footer .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .custom-footer .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            color: #a3a3a3;
+            transition: all 0.3s ease;
+            padding-left: 0 !important;
+        }
+        .custom-footer .social-icons a:hover {
+            background: #d4af37;
+            border-color: #d4af37;
+            color: #000;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+        }
+        .custom-footer .social-icons svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+        .custom-footer h4 {
+            color: #ffffff;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .custom-footer h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 28px;
+            height: 2px;
+            background: linear-gradient(90deg, #d4af37, #fef08a);
+            border-radius: 2px;
+            transition: width 0.4s ease;
+        }
+        .custom-footer .footer-col:hover h4::after {
+            width: 100%;
+        }
+        .custom-footer .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 13px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .custom-footer .footer-contact-icon {
+            font-size: 15px;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+        .custom-footer .footer-divider {
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #1f1f1f 20%, #d4af37 50%, #1f1f1f 80%, transparent);
+        }
+        .footer-bottom-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid #1f1f1f;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+        .footer-bottom-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            justify-content: center;
+        }
+        .footer-bottom-nav a {
+            color: #555 !important;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease !important;
+            padding-left: 0 !important;
+        }
+        .footer-bottom-nav a:hover {
+            color: #d4af37 !important;
+        }
+        .footer-bottom-copy {
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            color: #3a3a3a;
+        }
+    </style>
+    <footer class="custom-footer">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 40px; margin-bottom: 40px;">
 
-            <!-- Company Block with Enlarged Premium Logo Layout (h-36 for Massive Bold Look) -->
-            <div class="space-y-4">
-                <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
-                    class="h-36 w-auto object-contain mb-2 transition duration-300 hover:scale-105">
-                <p class="leading-relaxed text-zinc-400 font-light text-[11px]">Elite multi-capacity travel coordination
-                    engineered for critical airport baggage allowances and luxurious group logistics.</p>
-                <div class="border border-zincBorder p-3 bg-zinc-900/40 inline-block">
-                    <p class="text-[10px] text-white font-medium uppercase tracking-widest">🛡️ Regulated by TFL & PCO
-                    </p>
-                    <p class="text-[9px] text-white mt-1">License No: 11678</p>
+            <!-- Col 1: Brand & License -->
+            <div class="footer-col">
+                <img src="airport lugguage van london logo.png" alt="Airport Luggage Van Logo" style="height: 75px; width: auto; object-fit: contain; margin-bottom: 18px; filter: brightness(1.05);" />
+                <p style="font-size: 13px; line-height: 1.7; margin-bottom: 20px; color: #707070;">Elite multi-capacity travel coordination engineered for critical airport baggage allowances and luxurious group logistics.</p>
+                <div style="font-size: 12px; color: #d4af37; border-left: 2px solid #d4af37; padding: 8px 12px; background: rgba(212,175,55,0.05); border-radius: 0 4px 4px 0;">
+                    <span style="font-weight: 600; letter-spacing: 1px;">🛡️ REGULATED BY TFL & PCO</span><br>
+                    <small style="color: #999; letter-spacing: 0.5px;">License No: 11678</small>
                 </div>
             </div>
 
-            <!-- <!-- Custom Core Services Link Hub with Internal Links Relevance -->
-            <div>
-                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Our Luxury Services</h4>
-                <ul class="space-y-3 font-medium text-[11px] uppercase text-zinc-400">
-                    <li><a href="service.html" class="hover:text-white transition">LHA Luggage Transfer</a></li>
-                    <li><a href="service.html" class="hover:text-white transition">LGA Luggage Transfer</a>
-                    </li>
-                    <li><a href="service.html" class="hover:text-white transition">Stansted & Luton Luggage Transfer</a>
-                    </li>
-                    <li><a href="service.html" class="hover:text-white transition">Bath, Stonehenge & Cornwall Coastal
-                            Luggage</a>
-                    </li>
-                    <!-- <li><a href="service.html" class="hover:text-white transition">London City Airport Service</a>
-                    </li>
-                    <li><a href="service.html" class="hover:text-white transition">Luton Airport Transfer</a></li> -->
+            <!-- Col 2: Our Services -->
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+                    <li><a href="booking.html">Airport Luggage Transfers</a></li>
+                    <li><a href="booking.html">Touring Luggage Transfers</a></li>
+                    <li><a href="booking.html">Corporate Luggage Transfers</a></li>
+                    <li><a href="booking.html">Business Luggage Transfers</a></li>
+                    <li><a href="booking.html">First Class Luggage Transfers</a></li>
+                    <li><a href="booking.html">Wedding Luggage Transfers</a></li>
                 </ul>
             </div>
 
-            <!-- Fleet Redirection Matrix Connected internally -->
-            <!-- Fleet Redirection Matrix Connected Internally -->
-            <div>
-                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Fleet Segments</h4>
-                <ul class="space-y-3 font-medium text-[11px] uppercase text-zinc-400">
-                    <li>
-                        <a href="fleet.html" class="hover:text-gold transition duration-300">
-                            Medium Luggage Van
-                        </a>
-                    </li>
-                    <li>
-                        <a href="fleet.html" class="hover:text-gold transition duration-300">
-                            Large Luggage Van
-                        </a>
-                    </li>
-                    <li>
-                        <a href="fleet.html" class="hover:text-gold transition duration-300">
-                            Luton Van
-                        </a>
-                    </li>
-                    <!-- <li>
-                        <a href="fleet.html" class="hover:text-gold transition duration-300">
-                            Sprinter LWB Cargo
-                        </a>
-                    </li>
-                    <li>
-                        <a href="fleet.html" class="hover:text-gold transition duration-300">
-                            Sprinter LWB Shuttle
-                        </a>
-                    </li>
-                    <li>
-                        <a href="fleet.html" class="hover:text-gold transition duration-300">
-                            Sprinter Max Freight
-                        </a>
-                    </li> -->
-                </ul>
-            </div> <!-- Connections Panel with Social Media Icons -->
-            <div>
-                <h4 class="text-white uppercase font-serif tracking-[0.2em] mb-5 text-xs">Terminal Connection</h4>
-                <ul class="space-y-3 text-zinc-400 font-light text-[11px] mb-5">
-                    <li class="flex items-center space-x-2">
-                        <span>📞</span> <a href="tel:+442038277777"
-                            class="text-white font-medium hover:text-white transition">+44 203 827 7777</a>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span>📧</span> <span class="hover:text-white transition">bookings@airportluggagevan.com</span>
-                    </li>
-                    <li class="flex items-start space-x-2 leading-relaxed">
-                        <span>📍</span> <span>Airport Luggage Van,<br>London, CR7 8DP</span>
-                    </li>
+            <!-- Col 3: The Luxury Fleet -->
+            <div class="footer-col">
+                <h4>THE LUXURY FLEET</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px; margin-bottom: 30px;">
+                    <li><a href="fleet.html">MWB Vans</a></li>
+                    <li><a href="fleet.html">LWB Vans</a></li>
+                    <li><a href="fleet.html">Luton Cargo Vans</a></li>
                 </ul>
 
-                <!-- Social Media Grid -->
-                <div class="flex items-center space-x-4 border-t border-zincBorder/30 pt-4">
-                    <a href="https://www.facebook.com/londonprestigechauffeur" target="_blank" rel="noopener noreferrer"
-                        class="text-zinc-400 hover:text-white transition duration-300" aria-label="Facebook Profile">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+            </div>
+
+            <!-- Col 4: London Airports -->
+            <div class="footer-col">
+                <h4>LONDON AIRPORTS</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+                    <li><a href="booking.html">London Heathrow Airport</a></li>
+                    <li><a href="booking.html">London Gatwick Airport</a></li>
+                    <li><a href="booking.html">London City Airport</a></li>
+                    <li><a href="booking.html">London Private Airport</a></li>
+                    <li><a href="booking.html">London Stansted Airport</a></li>
+                    <li><a href="booking.html">London Southend Airport</a></li>
+                    <li><a href="booking.html">London Luton Airport</a></li>
+                    <li><a href="booking.html">Windsor Suite Heathrow</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 5: Private Airports -->
+            <div class="footer-col">
+                <h4>PRIVATE AIRPORTS</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+                    <li><a href="booking.html">Farnborough Executive Airport</a></li>
+                    <li><a href="booking.html">Biggin Hill Airport</a></li>
+                    <li><a href="booking.html">Blackbushe Airport</a></li>
+                    <li><a href="booking.html">Northolt Airport</a></li>
+                    <li><a href="booking.html">London Oxford Airport</a></li>
+                    <li><a href="booking.html">London Farnborough Airport</a></li>
+                    <li><a href="booking.html">London Jet Centre</a></li>
+                    <li><a href="booking.html">London Cruise Ports</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 5: Contact & Social -->
+            <div class="footer-col">
+                <h4>TERMINAL CONNECTION</h4>
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">📞</span>
+                    <a href="tel:+442038277777" style="font-size:13px;">+44 203 827 7777</a>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">📧</span>
+                    <a href="mailto:bookings@airportluggagevan.com" style="font-size:13px;">bookings@airportluggagevan.com</a>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">📍</span>
+                    <span style="font-size:13px;">Airport Luggage Van, London, CR7 8DP</span>
+                </div>
+
+                <!-- Social Icons with inline SVG -->
+                <div style="margin-top: 8px; margin-bottom: 8px;">
+                    <p style="font-size: 11px; letter-spacing: 1.5px; color: #555; text-transform: uppercase; margin-bottom: 12px;">Follow Us</p>
+                </div>
+                <div class="social-icons">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/londonprestigechauffeur" target="_blank" rel="noopener" aria-label="Facebook" title="Follow us on Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/airportluggagevanz?igsh=ZW1jZzdweGJydjVu&utm_source=qr
-" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-white transition duration-300"
-                        aria-label="Instagram Profile">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/airportluggagevanz?utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" title="Follow us on Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                         </svg>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-zincBorder border-opacity-20 pt-8 text-center text-[10px] font-light text-zinc-600 uppercase tracking-[0.2em]">
-            &copy; 2026 Airport Luggage Van. Managed with absolute security and discretion.
+        <div class="footer-bottom-wrap" style="padding-top: 20px;">
+            <div class="footer-bottom-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="fleet.html">Fleet</a>
+                <a href="worldwide.html">Worldwide</a>
+                <a href="contact.html">Contact</a>
+                <a href="booking.html">Book Now</a>
+            </div>
+            <p class="footer-bottom-copy">&copy; 2026 AIRPORT LUGGAGE VAN &nbsp;|&nbsp; ALL RIGHTS RESERVED &nbsp;|&nbsp; MANAGED WITH ABSOLUTE SECURITY AND DISCRETION.</p>
         </div>
     </footer>
 
