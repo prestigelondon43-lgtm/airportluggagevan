@@ -156,9 +156,8 @@ const newFooter = `    <!-- ================= BRAND FOOTER WITH LARGER LOGO & RE
             <div class="footer-col">
                 <img src="airport lugguage van london logo.png" alt="Airport Luggage Van Logo" style="height: 75px; width: auto; object-fit: contain; margin-bottom: 18px; filter: brightness(1.05);" />
                 <p style="font-size: 13px; line-height: 1.7; margin-bottom: 20px; color: #707070;">Elite multi-capacity travel coordination engineered for critical airport baggage allowances and luxurious group logistics.</p>
-                <div style="font-size: 12px; color: #d4af37; border-left: 2px solid #d4af37; padding: 8px 12px; background: rgba(212,175,55,0.05); border-radius: 0 4px 4px 0;">
-                    <span style="font-weight: 600; letter-spacing: 1px;">🛡️ REGULATED BY TFL & PCO</span><br>
-                    <small style="color: #999; letter-spacing: 0.5px;">License No: 11678</small>
+                <div style="font-size: 12px; color: #a3a3a3; border-left: 2px solid #333; padding: 6px 12px; background: rgba(255,255,255,0.03); border-radius: 0 4px 4px 0;">
+                    <span style="letter-spacing: 0.5px; font-weight: 500;">License No: 11678</span>
                 </div>
             </div>
 
@@ -175,9 +174,9 @@ const newFooter = `    <!-- ================= BRAND FOOTER WITH LARGER LOGO & RE
                 </ul>
             </div>
 
-            <!-- Col 3: The Luxury Fleet -->
+            <!-- Col 3: Luggage Vans Fleet -->
             <div class="footer-col">
-                <h4>THE LUXURY FLEET</h4>
+                <h4>LUGGAGE VANS FLEET</h4>
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px; margin-bottom: 30px;">
                     <li><a href="fleet.html">MWB Vans</a></li>
                     <li><a href="fleet.html">LWB Vans</a></li>
@@ -267,7 +266,7 @@ const newFooter = `    <!-- ================= BRAND FOOTER WITH LARGER LOGO & RE
         </div>
     </footer>`;
 
-const basePath = 'd:\\Airport Lugguage Van';
+const basePath = __dirname;
 
 files.forEach(file => {
     const filePath = path.join(basePath, file);
