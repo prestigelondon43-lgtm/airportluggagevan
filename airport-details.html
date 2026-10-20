@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <link rel="icon" type="image/png" href="airport lugguage van london logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">London Airport Luggage Transfer Guide | Airport Luggage Vans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        darkBg: '#0A0A0A',
+                        cardBg: '#141414',
+                        zincBorder: '#27272a'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+        .custom-language-selector {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            background: #111111;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            padding: 4px 8px;
+            transition: all 0.3s ease;
+        }
+
+        .custom-language-selector:hover {
+            border-color: #c5a880;
+        }
+
+        .custom-language-selector .globe-icon {
+            font-size: 13px;
+            margin-right: 5px;
+            color: #c5a880;
+        }
+
+        .custom-language-selector select {
+            background: transparent;
+            color: #ffffff;
+            border: none;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+            padding-right: 4px;
+        }
+
+        .nav-link {
+            white-space: nowrap;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #D4AF37;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        .badge-gold {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #D4AF37;
+        }
+    </style>
+<style>
+        /* Hide Google Translate top banner & clean styling */
+        body {
+            top: 0 !important;
+            position: static !important;
+        }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+        }
+        .skiptranslate:not(.custom-language-selector) {
+            display: none !important;
+        }
+        .goog-tooltip, .goog-tooltip:hover {
+            display: none !important;
+        }
+        .goog-text-highlight {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+        #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+        }
+</style>
+</head>
+
+<body class="bg-darkBg text-zinc-300 font-sans antialiased selection:bg-white selection:text-black overflow-x-hidden">
+
+    <!-- FLOATING QUICK ACTIONS -->
+    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[100] flex flex-col space-y-2.5 sm:space-y-3">
+        <a href="https://wa.me/442038277777" target="_blank" aria-label="Chat on WhatsApp"
+            class="bg-[#25D366] text-white p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition duration-300 flex items-center justify-center">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.93 0c3.166.001 6.141 1.233 8.375 3.469 2.235 2.237 3.465 5.212 3.464 8.377-.003 6.582-5.338 11.93-11.87 11.93a11.844 11.844 0 0 1-5.711-1.473L0 24zm6.208-3.834l.366.218a9.871 9.871 0 0 0 5.355 1.564c5.783 0 10.486-4.703 10.489-10.486.002-2.802-1.088-5.436-3.071-7.42a10.432 10.432 0 0 0-7.433-3.07C5.784 2.164 1.08 6.867 1.077 12.65a10.483 10.483 0 0 0 1.503 5.435l.239.38L1.752 22l3.666-1.1c1.554.848 3.3.1.517 2.162 1.341a9.82 9.82 0 0 0 3.996-1.125z" />
+            </svg>
+        </a>
+        <a href="tel:+442038277777" aria-label="Call Dispatch"
+            class="bg-white text-black p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition duration-300 flex items-center justify-center">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="border-b border-zincBorder border-opacity-50 bg-black/95 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 md:h-28 flex items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 group">
+                <img src="airport lugguage van london logo.png" alt="London Prestige Logo"
+                    class="h-12 sm:h-16 md:h-20 w-auto object-contain transition duration-300 group-hover:scale-105">
+                <div class="flex flex-col border-l border-zincBorder pl-2 sm:pl-3 py-0.5">
+                    <span class="text-[10px] sm:text-xs md:text-sm font-serif font-bold tracking-[0.15em] sm:tracking-[0.2em] text-white uppercase leading-tight">
+                        Airport
+                    </span>
+                    <span class="text-[10px] sm:text-xs md:text-sm font-serif font-bold tracking-[0.15em] sm:tracking-[0.2em] text-white uppercase leading-tight">
+                        Luggage Vans
+                    </span>
+                </div>
+            </a>
+
+            <nav class="hidden xl:flex items-center space-x-5 2xl:space-x-7 text-xs uppercase tracking-[0.15em] font-medium flex-shrink-0">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="service.html" class="nav-link">Services</a>
+                <a href="fleet.html" class="nav-link">Fleet</a>
+                <a href="worldwide.html" class="nav-link">Worldwide</a>
+                <a href="booking.html" class="nav-link">Book Now</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <a href="tel:+442038277777"
+                    class="hidden md:inline-flex items-center space-x-2 border border-zincBorder/80 px-3 py-2 bg-zinc-900/90 rounded-md hover:border-gold hover:text-gold transition text-white flex-shrink-0 text-[11px] uppercase tracking-wider font-semibold">
+                    <span class="text-xs">📞</span>
+                    <span class="hidden md:inline text-[10px] uppercase tracking-widest font-bold">+44 203 827 7777</span>
+                </a>
+                <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu"
+                    class="xl:hidden flex flex-col justify-center items-center w-10 h-10 border border-zincBorder bg-zinc-900 text-white hover:border-gold hover:text-gold transition focus:outline-none">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden xl:hidden border-t border-zincBorder/60 bg-black/98 backdrop-blur-xl px-6 py-6 transition-all duration-300 shadow-2xl">
+            <nav class="flex flex-col space-y-4 text-xs uppercase tracking-[0.2em] font-medium">
+                <a href="index.html" class="nav-link py-2 border-b border-zincBorder/30">Home</a>
+                <a href="about.html" class="nav-link py-2 border-b border-zincBorder/30">About</a>
+                <a href="service.html" class="nav-link py-2 border-b border-zincBorder/30">Services</a>
+                <a href="fleet.html" class="nav-link py-2 border-b border-zincBorder/30">Fleet</a>
+                <a href="worldwide.html" class="nav-link py-2 border-b border-zincBorder/30">Worldwide</a>
+                <a href="booking.html" class="nav-link py-2 border-b border-zincBorder/30">Book Now</a>
+                <a href="contact.html" class="nav-link py-2">Contact</a>
+            </nav>
+        </div>
+        <div id="google_translate_element" style="display:none;"></div>
+</header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-24 md:py-32 border-b border-zincBorder overflow-hidden bg-black">
+        <div class="absolute inset-0 z-0">
+            <img id="heroImage" src="heathrow airport.jpg" alt="Airport Terminal Luggage Operations"
+                class="w-full h-full object-cover opacity-35 filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center space-y-4">
+            <div class="inline-flex items-center gap-2 badge-gold px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest">
+                <span>🛡️ Dedicated Airport Protocol</span>
+                <span class="text-zinc-600">|</span>
+                <span id="airportCodeBadge">LHR / EGLL</span>
+            </div>
+            <h1 id="airportHeading" class="text-3xl sm:text-4xl md:text-6xl font-serif text-white tracking-wide uppercase leading-tight">
+                London Heathrow <span class="italic text-gold">Luggage Van Services</span>
+            </h1>
+            <p id="airportSubheading" class="text-zinc-400 text-xs sm:text-sm uppercase tracking-widest max-w-2xl mx-auto leading-relaxed">
+                Elite baggage coordination, oversized cargo transfers, terminal curbside handling, and private VIP flight support.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="booking.html" class="bg-gold text-black px-7 py-3.5 text-xs font-bold uppercase tracking-widest hover:bg-white transition">
+                    Book Luggage Van Now &rarr;
+                </a>
+                <a href="tel:+442038277777" class="border border-zincBorder bg-zinc-900 text-white px-7 py-3.5 text-xs font-bold uppercase tracking-widest hover:border-gold hover:text-gold transition">
+                    Call 24/7 Dispatch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK SPECS MATRIX -->
+    <section class="border-b border-zincBorder bg-zinc-950 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="border-r border-zincBorder/40 last:border-none p-3">
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 block">Flight Sync</span>
+                <strong id="specSync" class="text-sm md:text-base font-serif text-white block mt-1">Live Radar Tracking</strong>
+            </div>
+            <div class="border-r border-zincBorder/40 last:border-none p-3">
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 block">Luggage Payload</span>
+                <strong id="specPayload" class="text-sm md:text-base font-serif text-white block mt-1">Up to 80+ Cases</strong>
+            </div>
+            <div class="border-r border-zincBorder/40 last:border-none p-3">
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 block">Terminal Access</span>
+                <strong id="specAccess" class="text-sm md:text-base font-serif text-white block mt-1">All Terminals & FBOs</strong>
+            </div>
+            <div class="p-3">
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 block">Regulatory Compliance</span>
+                <strong class="text-sm md:text-base font-serif text-gold block mt-1">TFL & PCO Licensed</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN COMPREHENSIVE DETAIL CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-20">
+
+        <!-- SECTION 1: DETAILED TERMINAL NARRATIVE & OVERVIEW -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div class="lg:col-span-2 space-y-6">
+                <div class="space-y-2">
+                    <span class="text-gold text-xs uppercase tracking-[0.25em] font-bold block">Airport Operations Matrix</span>
+                    <h2 id="overviewTitle" class="text-2xl sm:text-3xl font-serif text-white uppercase tracking-wider">
+                        Executive Baggage Transport & Handling Protocol
+                    </h2>
+                </div>
+                <div id="overviewBody" class="space-y-4 text-zinc-400 text-sm leading-relaxed">
+                    <!-- Dynamic Injected Detailed Text -->
+                </div>
+
+                <!-- Terminal Badges -->
+                <div class="pt-4">
+                    <h4 class="text-xs uppercase tracking-widest text-zinc-400 font-bold mb-3">Covered Terminals & Meeting Points:</h4>
+                    <div id="terminalTags" class="flex flex-wrap gap-2">
+                        <!-- Injected Terminal Tags -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDEBAR: QUICK DISPATCH ESTIMATE & VEHICLE SELECTION -->
+            <div class="bg-cardBg border border-zincBorder p-6 sm:p-8 space-y-6 relative overflow-hidden">
+                <div class="absolute -top-12 -right-12 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
+                <h3 class="text-lg font-serif uppercase tracking-wider text-white border-b border-zincBorder pb-4">
+                    Fast Booking Request
+                </h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">
+                    Reserve an exclusive dedicated Mercedes MWB, LWB, or Luton Cargo luggage van for this route with guaranteed on-time tarmac curbside dispatch.
+                </p>
+                <div class="space-y-3 text-xs">
+                    <div class="flex justify-between py-2 border-b border-zincBorder/40">
+                        <span class="text-zinc-500 uppercase tracking-wider">Typical Dispatch:</span>
+                        <span class="text-white font-semibold">Immediate / Pre-Book</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-zincBorder/40">
+                        <span class="text-zinc-500 uppercase tracking-wider">Meet & Greet:</span>
+                        <span class="text-gold font-semibold">Included on Request</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-zincBorder/40">
+                        <span class="text-zinc-500 uppercase tracking-wider">Luggage Assistance:</span>
+                        <span class="text-white font-semibold">Full Driver Handling</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-zincBorder/40">
+                        <span class="text-zinc-500 uppercase tracking-wider">Driver PCO Status:</span>
+                        <span class="text-white font-semibold">Security Vetted</span>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <a href="booking.html" class="block w-full text-center bg-gold text-black py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition">
+                        Configure Booking &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: FLEET CAPACITY OPTIONS SUITED FOR THIS AIRPORT -->
+        <section class="border-t border-zincBorder pt-16">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+                <span class="text-gold text-xs uppercase tracking-[0.25em] font-bold block">Vehicle Deployment</span>
+                <h3 class="text-2xl sm:text-3xl font-serif text-white uppercase tracking-wider">
+                    Recommended Luggage Vans For This Airport
+                </h3>
+                <p class="text-zinc-400 text-xs uppercase tracking-widest">
+                    Select the ideal capacity depending on passenger numbers, golf bags, and heavy cargo payloads.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Vehicle 1 -->
+                <div class="bg-cardBg border border-zincBorder overflow-hidden flex flex-col justify-between">
+                    <div class="h-48 overflow-hidden bg-black">
+                        <img src="2.png.jpg" alt="Mercedes MWB Luggage Van" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h4 class="text-base font-serif uppercase tracking-wider text-white">Mercedes MWB Van</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed">
+                            Ideal for family arrivals, VIP diplomatic escorts, and hotel transfers with generous payload.
+                        </p>
+                        <div class="border-t border-b border-zincBorder/50 py-2.5 text-[11px] text-gold font-semibold tracking-wider">
+                            💼 28 - 30 Standard Cases
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="booking.html" class="block text-center border border-gold text-gold py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition">
+                            Book MWB Van
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2 -->
+                <div class="bg-cardBg border border-zincBorder overflow-hidden flex flex-col justify-between">
+                    <div class="h-48 overflow-hidden bg-black">
+                        <img src="long luggage .png.jpg" alt="Mercedes LWB Luggage Van" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h4 class="text-base font-serif uppercase tracking-wider text-white">Mercedes LWB Van</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed">
+                            Engineered for high-volume family long-hauls, multi-country touring, and large luxury travel parties.
+                        </p>
+                        <div class="border-t border-b border-zincBorder/50 py-2.5 text-[11px] text-gold font-semibold tracking-wider">
+                            💼 30 - 45 Standard Cases
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="booking.html" class="block text-center border border-gold text-gold py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition">
+                            Book LWB Van
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3 -->
+                <div class="bg-cardBg border border-zincBorder overflow-hidden flex flex-col justify-between">
+                    <div class="h-48 overflow-hidden bg-black">
+                        <img src="lutin.png.jpg" alt="Luton Cargo Van" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h4 class="text-base font-serif uppercase tracking-wider text-white">Luton Box Cargo Van</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed">
+                            Maximum payload van featuring tail-lift facility for exhibition props, film gear, and 80+ cases.
+                        </p>
+                        <div class="border-t border-b border-zincBorder/50 py-2.5 text-[11px] text-gold font-semibold tracking-wider">
+                            💼 80+ Heavy Cases / Cargo
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="booking.html" class="block text-center border border-gold text-gold py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition">
+                            Book Luton Van
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: STEP-BY-STEP AIRPORT PROCEDURES & PROTOCOL -->
+        <section class="border-t border-zincBorder pt-16">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+                <span class="text-gold text-xs uppercase tracking-[0.25em] font-bold block">Standard Operating Procedures</span>
+                <h3 class="text-2xl sm:text-3xl font-serif text-white uppercase tracking-wider">
+                    How Airport Luggage Van Collection Works
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-cardBg border border-zincBorder p-6 space-y-3 relative">
+                    <span class="text-3xl font-serif text-gold block">01</span>
+                    <h4 class="text-sm font-serif uppercase tracking-wider text-white font-bold">Flight Monitored</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Our centralized control tower tracks your aircraft in real time via live ADS-B radar. Delay adjustments are made automatically.
+                    </p>
+                </div>
+
+                <div class="bg-cardBg border border-zincBorder p-6 space-y-3 relative">
+                    <span class="text-3xl font-serif text-gold block">02</span>
+                    <h4 class="text-sm font-serif uppercase tracking-wider text-white font-bold">Curbside Standby</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Your driver stages the luggage van in the designated terminal priority parking zone 25 minutes prior to touchdown.
+                    </p>
+                </div>
+
+                <div class="bg-cardBg border border-zincBorder p-6 space-y-3 relative">
+                    <span class="text-3xl font-serif text-gold block">03</span>
+                    <h4 class="text-sm font-serif uppercase tracking-wider text-white font-bold">Driver Porterage</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        The driver assists with offloading carts, heavy suitcases, sensitive art cases, and secures cargo in our clean, lined compartments.
+                    </p>
+                </div>
+
+                <div class="bg-cardBg border border-zincBorder p-6 space-y-3 relative">
+                    <span class="text-3xl font-serif text-gold block">04</span>
+                    <h4 class="text-sm font-serif uppercase tracking-wider text-white font-bold">Direct Express Delivery</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Direct onward transfer to Central London hotels, private residences, embassies, or connecting UK airports without detour.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: FREQUENTLY ASKED QUESTIONS (FAQ) -->
+        <section class="border-t border-zincBorder pt-16">
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="text-center space-y-2">
+                    <span class="text-gold text-xs uppercase tracking-[0.25em] font-bold block">Airport Transfer FAQs</span>
+                    <h3 class="text-2xl sm:text-3xl font-serif text-white uppercase tracking-wider">
+                        Frequently Asked Questions
+                    </h3>
+                </div>
+
+                <div class="space-y-4" id="faqList">
+                    <!-- Dynamic injected FAQs -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION BANNER -->
+        <section class="border border-gold/40 bg-gradient-to-r from-zinc-950 via-[#18150f] to-zinc-950 p-8 sm:p-12 text-center space-y-5">
+            <span class="text-gold text-xs uppercase tracking-[0.3em] font-bold block">24/7 Operations Room</span>
+            <h3 class="text-2xl sm:text-4xl font-serif text-white uppercase tracking-wider">
+                Need Immediate Baggage Van Dispatch?
+            </h3>
+            <p class="text-zinc-400 text-xs sm:text-sm uppercase tracking-widest max-w-xl mx-auto">
+                Connect directly with our central London transport coordinator for fast quotes, special cargo, or multiple van convoys.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <a href="booking.html" class="bg-gold text-black px-8 py-3.5 text-xs font-bold uppercase tracking-widest hover:bg-white transition">
+                    Book Online Now
+                </a>
+                <a href="https://wa.me/442038277777" target="_blank" class="bg-[#25D366] text-white px-8 py-3.5 text-xs font-bold uppercase tracking-widest hover:bg-[#1ebd5a] transition">
+                    WhatsApp Desk &rarr;
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- ================= BRAND FOOTER WITH LARGER LOGO & RELEVANT INTERNAL LINKS ================= -->
+    <style>
+        .custom-footer {
+            background-color: #0b0b0b;
+            color: #a3a3a3;
+            font-family: 'Inter', sans-serif;
+            padding: 60px 20px 20px 20px;
+            border-top: 1px solid #1f1f1f;
+        }
+        .custom-footer a {
+            color: #a3a3a3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .custom-footer ul li a {
+            display: inline-block;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+        .custom-footer ul li a:hover {
+            color: #d4af37;
+            padding-left: 6px;
+        }
+        .custom-footer ul li a::before {
+            content: '— ';
+            color: #d4af37;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .custom-footer ul li a:hover::before {
+            opacity: 1;
+        }
+        .custom-footer .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .custom-footer .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            color: #a3a3a3;
+            transition: all 0.3s ease;
+            padding-left: 0 !important;
+        }
+        .custom-footer .social-icons a:hover {
+            background: #d4af37;
+            border-color: #d4af37;
+            color: #000;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+        }
+        .custom-footer .social-icons svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+        .custom-footer h4 {
+            color: #ffffff;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .custom-footer h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 28px;
+            height: 2px;
+            background: linear-gradient(90deg, #d4af37, #fef08a);
+            border-radius: 2px;
+            transition: width 0.4s ease;
+        }
+        .custom-footer .footer-col:hover h4::after {
+            width: 100%;
+        }
+        .custom-footer .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 13px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .custom-footer .footer-contact-icon {
+            font-size: 15px;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+        .custom-footer .footer-divider {
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #1f1f1f 20%, #d4af37 50%, #1f1f1f 80%, transparent);
+        }
+        .footer-bottom-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid #1f1f1f;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+        .footer-bottom-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            justify-content: center;
+        }
+        .footer-bottom-nav a {
+            color: #555 !important;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease !important;
+            padding-left: 0 !important;
+        }
+        .footer-bottom-nav a:hover {
+            color: #d4af37 !important;
+        }
+        .footer-bottom-copy {
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            color: #3a3a3a;
+        }
+    </style>
+    <footer class="custom-footer">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 40px; margin-bottom: 40px;">
+
+            <!-- Col 1: Brand & License -->
+            <div class="footer-col">
+                <img src="airport lugguage van london logo.png" alt="Airport Luggage Van Logo" style="height: 75px; width: auto; object-fit: contain; margin-bottom: 18px; filter: brightness(1.05);" />
+                <p style="font-size: 13px; line-height: 1.7; margin-bottom: 20px; color: #707070;">Elite multi-capacity travel coordination engineered for critical airport baggage allowances and luxurious group logistics.</p>
+                <div style="font-size: 12px; color: #d4af37; border-left: 2px solid #d4af37; padding: 8px 12px; background: rgba(212,175,55,0.05); border-radius: 0 4px 4px 0;">
+                    <span style="font-weight: 600; letter-spacing: 1px;">🛡️ REGULATED BY TFL & PCO</span><br>
+                    <small style="color: #999; letter-spacing: 0.5px;">License No: 11678</small>
+                </div>
+            </div>
+
+            <!-- Col 2: Our Services -->
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+                    <li><a href="booking.html">Airport Luggage Transfers</a></li>
+                    <li><a href="booking.html">Touring Luggage Transfers</a></li>
+                    <li><a href="booking.html">Corporate Luggage Transfers</a></li>
+                    <li><a href="booking.html">Business Luggage Transfers</a></li>
+                    <li><a href="booking.html">First Class Luggage Transfers</a></li>
+                    <li><a href="booking.html">Wedding Luggage Transfers</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: The Luxury Fleet -->
+            <div class="footer-col">
+                <h4>THE LUXURY FLEET</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px; margin-bottom: 30px;">
+                    <li><a href="fleet.html">MWB Vans</a></li>
+                    <li><a href="fleet.html">LWB Vans</a></li>
+                    <li><a href="fleet.html">Luton Cargo Vans</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Col 4: London Airports -->
+            <div class="footer-col">
+                <h4>LONDON AIRPORTS</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+                    <li><a href="airport-details.html?airport=heathrow">London Heathrow Airport</a></li>
+                    <li><a href="airport-details.html?airport=gatwick">London Gatwick Airport</a></li>
+                    <li><a href="airport-details.html?airport=city">London City Airport</a></li>
+                    <li><a href="airport-details.html?airport=private">London Private Airport</a></li>
+                    <li><a href="airport-details.html?airport=stansted">London Stansted Airport</a></li>
+                    <li><a href="airport-details.html?airport=southend">London Southend Airport</a></li>
+                    <li><a href="airport-details.html?airport=luton">London Luton Airport</a></li>
+                    <li><a href="airport-details.html?airport=windsor">Windsor Suite Heathrow</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 5: Private Airports -->
+            <div class="footer-col">
+                <h4>PRIVATE AIRPORTS</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+                    <li><a href="booking.html">Farnborough Executive Airport</a></li>
+                    <li><a href="booking.html">Biggin Hill Airport</a></li>
+                    <li><a href="booking.html">Blackbushe Airport</a></li>
+                    <li><a href="booking.html">Northolt Airport</a></li>
+                    <li><a href="booking.html">London Oxford Airport</a></li>
+                    <li><a href="booking.html">London Farnborough Airport</a></li>
+                    <li><a href="booking.html">London Jet Centre</a></li>
+                    <li><a href="booking.html">London Cruise Ports</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 5: Contact & Social -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">📞</span>
+                    <a href="tel:+442038277777" style="font-size:13px;">+44 203 827 7777</a>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">📧</span>
+                    <a href="mailto:bookings@airportluggagevans.com" style="font-size:13px;">bookings@airportluggagevan.com</a>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">📍</span>
+                    <span style="font-size:13px;">Airport Luggage Van, London, CR7 8DP</span>
+                </div>
+
+                <!-- Social Icons with inline SVG -->
+                <div style="margin-top: 8px; margin-bottom: 8px;">
+                    <p style="font-size: 11px; letter-spacing: 1.5px; color: #555; text-transform: uppercase; margin-bottom: 12px;">Follow Us</p>
+                </div>
+                <div class="social-icons">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/londonprestigechauffeur" target="_blank" rel="noopener" aria-label="Facebook" title="Follow us on Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/airportluggagevanz?utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" title="Follow us on Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-wrap" style="padding-top: 20px;">
+            <div class="footer-bottom-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="fleet.html">Fleet</a>
+                <a href="worldwide.html">Worldwide</a>
+                <a href="contact.html">Contact</a>
+                <a href="booking.html">Book Now</a>
+            </div>
+            <p class="footer-bottom-copy">&copy; 2026 AIRPORT LUGGAGE VAN &nbsp;|&nbsp; ALL RIGHTS RESERVED &nbsp;|&nbsp; MANAGED WITH ABSOLUTE SECURITY AND DISCRETION.</p>
+        </div>
+    </footer>
+
+    <!-- DATA & LOGIC -->
+    <script>
+        const airportData = {
+            'heathrow': {
+                name: 'London Heathrow Airport',
+                code: 'LHR / EGLL',
+                image: 'heathrow airport.jpg',
+                terminals: ['Terminal 2 (The Queen\'s Terminal)', 'Terminal 3', 'Terminal 4', 'Terminal 5', 'Signature Flight Support (FBO)'],
+                sync: 'Live Radar & Terminal Sync',
+                payload: '28 to 80+ Suitcases',
+                access: 'Terminals 2, 3, 4, 5 & FBOs',
+                paragraphs: [
+                    "London Heathrow Airport (LHR) is one of the world's busiest international travel gateways, welcoming hundreds of long-haul arrivals daily. When traveling with substantial baggage, designer wardrobes, sporting equipment, or multiple travel trunks, standard private hire vehicles and minicabs simply lack the physical cubic payload to accommodate everything in a single, secure transfer.",
+                    "Our specialist Airport Luggage Van service at Heathrow provides dedicated Mercedes-Benz MWB, LWB, and Luton Box Cargo vans with licensed TFL chauffeurs. We position our vehicles immediately outside your terminal exit in priority parking lanes, eliminating the frustration of dragging heavy carts through parking shuttles or crowded underground stations.",
+                    "Whether you are arriving at Terminal 5 on British Airways First Class, landing at Terminal 3 via Emirates or Virgin Atlantic, or disembarking at Terminal 2, our driver tracks your flight's wheel-down time in real time. We provide complete handling assistance right at the terminal curbside and transport your belongings safely to luxury hotels in Mayfair, Knightsbridge, or private UK estates."
+                ],
+                faqs: [
+                    { q: "Where will the luggage van driver meet us at Heathrow?", a: "Your driver can either meet you inside the arrivals hall with an executive nameboard or coordinate directly via phone/WhatsApp for immediate curbside pickup at the short-stay passenger loading area." },
+                    { q: "What happens if our Heathrow flight is delayed?", a: "All flights are monitored live using ADS-B radar. Your driver's arrival time is automatically synced to your actual landing time at zero additional charge." },
+                    { q: "Can the luggage van travel alongside our VIP passenger limousine?", a: "Yes, we regularly perform synchronized convoy transfers where the passengers ride in an S-Class or V-Class, and the luggage van follows directly behind to the exact destination." }
+                ]
+            },
+            'gatwick': {
+                name: 'London Gatwick Airport',
+                code: 'LGW / EGKK',
+                image: 'getwick airport.jpg',
+                terminals: ['North Terminal', 'South Terminal', 'Signature Flight Support'],
+                sync: 'North & South Terminal Tracker',
+                payload: '28 to 80+ Cases',
+                access: 'North & South Curbside',
+                paragraphs: [
+                    "London Gatwick Airport (LGW) serves as the primary transatlantic and European holiday corridor for London and the South East. Spanning both the North and South terminals, navigating excessive luggage through Gatwick's busy inter-terminal shuttles can be extremely challenging for families and tour parties.",
+                    "Our dedicated Gatwick Luggage Van fleet offers direct express transit from Gatwick tarmac curbside straight to Central London, Surrey, Sussex, or connecting airports. Equipped with heavy-duty carpeted flooring, load-securing straps, and climate protection, our vans guarantee your valuables travel in immaculate condition.",
+                    "Each driver possesses extensive route knowledge across the M23, A23, and London arterial routes, avoiding congestion to ensure your luggage arrives at your hotel or residence safely and punctually."
+                ],
+                faqs: [
+                    { q: "Do you service both North and South terminals at Gatwick?", a: "Yes, our luggage vans have designated commercial permits for prompt staging at both North and South terminal loading bays." },
+                    { q: "Can we transfer luggage directly from Gatwick to Heathrow?", a: "Yes, inter-airport transfers between Gatwick and Heathrow are one of our most popular services, completing within 50 to 65 minutes depending on traffic." }
+                ]
+            },
+            'city': {
+                name: 'London City Airport',
+                code: 'LCY / EGLC',
+                image: 'secramanto international airport.jpg',
+                terminals: ['Main Terminal', 'Private Jet Centre'],
+                sync: 'Docklands Real-Time Radar',
+                payload: 'Corporate & VIP Luggage',
+                access: 'Dedicated Docklands Curbside',
+                paragraphs: [
+                    "Located in the heart of London's financial district, London City Airport (LCY) is the preferred arrival hub for business executives, private jet travelers, and European corporate delegations. While City Airport is celebrated for its speed and efficiency, transport options for oversized luggage or exhibition materials are limited.",
+                    "Airport Luggage Vans bridges this gap by deploying pristine Mercedes Sprinters directly to London City Airport's curbside and the adjacent Jet Centre. Within minutes of passing through customs, our chauffeur transfers your bags securely, allowing corporate teams to proceed unencumbered to Canary Wharf, The City, or West End boardrooms.",
+                    "Our cargo bays are equipped with privacy glass and GPS tracking, ensuring maximum discretion and confidentiality for high-profile financial personnel."
+                ],
+                faqs: [
+                    { q: "Can you deliver luggage directly to Canary Wharf or Bank offices?", a: "Yes, our drivers specialize in downtown corporate deliveries, loading docks, and hotel concierge handoffs across central London." },
+                    { q: "How quickly can a van arrive at London City Airport?", a: "We maintain staged vehicles throughout East and Central London, offering rapid deployment on short notice." }
+                ]
+            },
+            'private': {
+                name: 'London Private Jet Airports',
+                code: 'VIP / FBO DIRECT',
+                image: 'private get terminal.jpg',
+                terminals: ['Farnborough', 'Biggin Hill', 'RAF Northolt', 'London Oxford', 'Harrods Aviation Luton'],
+                sync: 'FBO Flight Deck Protocol',
+                payload: 'Unlimited Group Cargo',
+                access: 'Direct Tarmac & Ramp Loading',
+                paragraphs: [
+                    "Private aviation demands the highest standard of logistical precision, privacy, and security. Private jet passengers arriving at UK FBOs often travel with an extraordinary volume of luggage—including bespoke designer wardrobes, ski gear, golf bags, and delicate luxury shopping.",
+                    "Our London Private Airport Luggage Van service is trusted by royal delegations, global family offices, and executive charter brokers. Our chauffeurs possess tarmac security clearance and extensive experience coordinating with FBO ramp agents across Harrods Aviation, Signature Flight Support, and Jet Aviation.",
+                    "We ensure seamless airside or curbside transfer directly from the aircraft stairs into our climate-controlled Mercedes luggage vans, maintaining strict client anonymity at all times."
+                ],
+                faqs: [
+                    { q: "Do you have tarmac access to load directly from the aircraft?", a: "Yes, at authorized FBOs with prior handler clearance, our vans can stage airside to receive baggage straight from the aircraft cargo hold." },
+                    { q: "Can you provide multiple vans for private charter groups?", a: "Yes, we can deploy multi-van fleets and synchronized luggage convoys for large delegations, royal suites, and touring entourages." }
+                ]
+            },
+            'stansted': {
+                name: 'London Stansted Airport',
+                code: 'STN / EGSS',
+                image: 'stn airport.jpg',
+                terminals: ['Main Terminal', 'Faye Aviation', 'Harrods Aviation (FBO)'],
+                sync: 'Stansted M11 Dispatch',
+                payload: '28 to 80+ Cases',
+                access: 'Express Passenger Terminal & FBOs',
+                paragraphs: [
+                    "London Stansted Airport (STN) is an essential international hub situated north of London, housing substantial commercial traffic alongside premier private jet facilities at Harrods Aviation and Titan Airways.",
+                    "Moving extensive baggage from Stansted to Central London via standard train or coach is uncomfortable and fraught with security risks. Our dedicated luggage van transport offers door-to-door convenience with zero passenger hassle.",
+                    "Each vehicle is equipped with modern suspension and internal tie-downs, ensuring fragile contents remain completely undisturbed during highway transit along the M11."
+                ],
+                faqs: [
+                    { q: "How long does a luggage van take from Stansted to Central London?", a: "Direct motorway transit typically takes 55 to 75 minutes depending on traffic and drop-off postal code." }
+                ]
+            },
+            'southend': {
+                name: 'London Southend Airport',
+                code: 'SEN / EGMC',
+                image: 'southend.jpg',
+                terminals: ['Passenger Terminal', 'Stobart Jet Centre'],
+                sync: 'East Coast Flight Radar',
+                payload: 'Family & Corporate Capacity',
+                access: 'Terminal Entrance Loading',
+                paragraphs: [
+                    "London Southend Airport (SEN) provides a convenient gateway to Essex, East London, and the Thames Estuary corridor. With growing private flights and regional scheduled connections, dependable luggage transit is crucial.",
+                    "Our dedicated luggage transport vans provide reliable connections between Southend and any destination in Greater London, Kent, or Cambridge. Enjoy complete peace of mind knowing your luggage is securely handled by professional chauffeurs."
+                ],
+                faqs: [
+                    { q: "Can you pick up from Southend and deliver to Central London hotels?", a: "Yes, we provide 24/7 direct transfers from Southend terminal to all Central London hotels, luxury residences, and event venues." }
+                ]
+            },
+            'luton': {
+                name: 'London Luton Airport',
+                code: 'LTN / EGGW',
+                image: 'luton city hub.jpg',
+                terminals: ['Main Terminal', 'Signature Flight Support T1 & T2', 'Harrods Aviation'],
+                sync: 'Bedfordshire M1 Dispatch',
+                payload: '28 to 80+ Cases',
+                access: 'Curbside Express & FBO Ramp',
+                paragraphs: [
+                    "London Luton Airport (LTN) is celebrated as the UK's leading private jet hub, housing world-renowned FBOs like Harrods Aviation and Signature Flight Support, alongside its busy commercial passenger terminal.",
+                    "Our Luton Luggage Van operations cater to both high-net-worth individuals arriving on private jets and large families flying commercial carriers. We handle heavy holiday baggage, golf tours, winter ski equipment, and international shopping payloads with utmost professionalism.",
+                    "With direct access to the M1 corridor, our luggage vans provide swift, non-stop transfers into Mayfair, Belgravia, and the Home Counties."
+                ],
+                faqs: [
+                    { q: "Can you meet us at Harrods Aviation Luton?", a: "Yes, we regularly service Harrods Aviation and Signature Flight Support at Luton, coordinating seamlessly with the handling agents." }
+                ]
+            },
+            'windsor': {
+                name: 'The Windsor Suite Heathrow',
+                code: 'VIP SUITE / ROYAL TERMINAL',
+                image: 'theme1.jpg',
+                terminals: ['Heathrow VIP Windsor Suite'],
+                sync: 'Dedicated VIP Diplomatic Protocol',
+                payload: 'Unlimited Diplomatic & Royal Cargo',
+                access: 'Direct Airside & Suite Curbside',
+                paragraphs: [
+                    "The Windsor Suite at London Heathrow Airport represents the absolute pinnacle of luxury, privacy, and diplomatic airport hospitality. Reserved for heads of state, royal families, celebrities, and discerning high-net-worth travelers, the Windsor Suite bypasses all public terminal areas.",
+                    "Airport Luggage Vans provides dedicated high-security baggage transport for guests of The Windsor Suite. Our chauffeurs coordinate closely with the Heathrow VIP operations team, securing your luggage directly from the aircraft ramp or the suite's private reception.",
+                    "All luggage is transported in unmarked, high-security Mercedes Sprinters with privacy glass, ensuring complete confidentiality from tarmac to private residence or five-star suite."
+                ],
+                faqs: [
+                    { q: "How does luggage coordination work with the Windsor Suite?", a: "The Heathrow VIP team handles customs clearance within the private suite, while our luggage van receives the baggage immediately at the suite's private vehicle bay for secure onward transit." },
+                    { q: "Are your drivers security-cleared for diplomatic escorts?", a: "Yes, our drivers are experienced in diplomatic protocols, NDAs, and high-security convoy operations." }
+                ]
+            }
+        };
+
+        // Parse query parameter
+        function getAirportKey() {
+            const params = new URLSearchParams(window.location.search);
+            const key = params.get('airport');
+            if (key && airportData[key.toLowerCase()]) {
+                return key.toLowerCase();
+            }
+            return 'heathrow'; // Default fallback
+        }
+
+        // Render page content dynamically
+        function renderAirportPage() {
+            const key = getAirportKey();
+            const data = airportData[key];
+
+            document.getElementById('pageTitle').textContent = `${data.name} Luggage Van Services | Airport Luggage Vans`;
+            document.getElementById('airportHeading').innerHTML = `${data.name.replace('London ', '')} <span class="italic text-gold">Luggage Van Services</span>`;
+            document.getElementById('airportCodeBadge').textContent = data.code;
+            document.getElementById('heroImage').src = data.image;
+
+            document.getElementById('specSync').textContent = data.sync;
+            document.getElementById('specPayload').textContent = data.payload;
+            document.getElementById('specAccess').textContent = data.access;
+
+            document.getElementById('overviewTitle').textContent = `${data.name} Luggage Van Logistics & Ground Protocols`;
+
+            // Render Overview Paragraphs
+            const overviewEl = document.getElementById('overviewBody');
+            overviewEl.innerHTML = data.paragraphs.map(p => `<p class="leading-relaxed">${p}</p>`).join('');
+
+            // Render Terminals
+            const terminalsEl = document.getElementById('terminalTags');
+            terminalsEl.innerHTML = data.terminals.map(t => `
+                <span class="inline-block bg-zinc-900 border border-zincBorder px-3 py-1.5 text-xs text-zinc-300 font-medium">
+                    📍 ${t}
+                </span>
+            `).join('');
+
+            // Render FAQs
+            const faqEl = document.getElementById('faqList');
+            faqEl.innerHTML = data.faqs.map(f => `
+                <div class="bg-cardBg border border-zincBorder p-6 space-y-2">
+                    <h5 class="text-white font-serif text-sm uppercase tracking-wide flex items-center gap-2">
+                        <span class="text-gold font-bold">Q:</span> ${f.q}
+                    </h5>
+                    <p class="text-xs text-zinc-400 leading-relaxed pl-5">
+                        ${f.a}
+                    </p>
+                </div>
+            `).join('');
+        }
+
+        renderAirportPage();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Google Translate Engine & Instant Cookie Switch Script -->
+    <script type="text/javascript">
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,zh-CN,tr,ko,ja,fa,ar,hi,ur,it',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function translatePage(langCode) {
+            if (!langCode || langCode === 'en') {
+                // Clear googtrans cookie to reset to default English
+                document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.hostname;
+                var selectElement = document.querySelector('.goog-te-combo');
+                if (selectElement) {
+                    selectElement.value = 'en';
+                    selectElement.dispatchEvent(new Event('change'));
+                }
+                setTimeout(function() { window.location.reload(); }, 200);
+                return;
+            }
+
+            // Set the googtrans cookie for instantaneous and persistent translation
+            var transVal = '/en/' + langCode;
+            document.cookie = "googtrans=" + transVal + "; path=/;";
+            document.cookie = "googtrans=" + transVal + "; path=/; domain=" + window.location.hostname;
+
+            var selectElement = document.querySelector('.goog-te-combo');
+            if (selectElement) {
+                selectElement.value = langCode;
+                selectElement.dispatchEvent(new Event('change'));
+            } else {
+                window.location.reload();
+            }
+        }
+
+        // Keep dropdown in sync with current active language cookie
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentTrans = getCookie('googtrans');
+            if (currentTrans) {
+                var parts = currentTrans.split('/');
+                var targetLang = parts[parts.length - 1];
+                var select = document.getElementById('languageSelect');
+                if (select && targetLang) {
+                    select.value = targetLang;
+                }
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

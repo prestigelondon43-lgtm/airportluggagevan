@@ -55,41 +55,44 @@
             }
         }
 
-        .custom-language-selector {
+                .custom-language-selector {
             position: relative;
             display: inline-flex;
             align-items: center;
-            background: #111111;
-            border: 1px solid #333333;
-            border-radius: 4px;
-            padding: 4px 8px;
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 6px;
+            padding: 5px 8px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            flex-shrink: 0;
         }
 
         .custom-language-selector:hover {
-            border-color: #c5a880;
-            /* Gold Highlight */
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.08);
         }
 
         .custom-language-selector .globe-icon {
             font-size: 13px;
             margin-right: 5px;
-            color: #c5a880;
+            color: #d4af37;
+            line-height: 1;
         }
 
         .custom-language-selector select {
             background: transparent;
             color: #ffffff;
             border: none;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
             cursor: pointer;
             outline: none;
-            padding-right: 4px;
+            padding-right: 2px;
         }
 
-        /* Dropdown options dark background */
         .custom-language-selector select option {
             background-color: #111111;
             color: #ffffff;
@@ -98,6 +101,7 @@
 
         /* Luxury Navigation Hover Effect */
         .nav-link {
+            white-space: nowrap;
             position: relative;
             color: #a1a1aa;
             transition: color 0.3s ease, transform 0.3s ease;
@@ -138,8 +142,136 @@
             transform: scaleX(1);
             background: #d4af37;
         }
+
+        /* Banner Container Link Style */
+        .chauffeur-banner-link {
+            text-decoration: none;
+            display: block;
+            margin: 50px auto 40px auto;
+            max-width: 850px;
+            padding: 0 20px;
+        }
+
+        /* Banner Styling */
+        .chauffeur-banner {
+            background: linear-gradient(135deg, #111111, #1e1e1e);
+            border: 1px solid #d4af37;
+            border-radius: 14px;
+            padding: 36px 24px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulseGlow 3s infinite ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chauffeur-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Text Styling */
+        .chauffeur-content h2 {
+            color: #ffffff;
+            font-size: 26px;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .chauffeur-content p {
+            color: #d4af37;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .chauffeur-banner:hover {
+            transform: translateY(-4px) scale(1.015);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.35);
+        }
+
+        .chauffeur-banner:hover .chauffeur-content p {
+            gap: 12px;
+            color: #fef08a;
+        }
+
+        /* Continuous Pulse/Glow Animation */
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 28px rgba(212, 175, 55, 0.55);
+            }
+
+            100% {
+                box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+            }
+        }
+
+        /* Responsive Mobile Styles */
+        @media (max-width: 640px) {
+            .chauffeur-banner {
+                padding: 24px 16px;
+                border-radius: 10px;
+            }
+
+            .chauffeur-content h2 {
+                font-size: 19px;
+                letter-spacing: 0.5px;
+            }
+
+            .chauffeur-content p {
+                font-size: 12px;
+                letter-spacing: 1.2px;
+            }
+        }
     </style>
 
+<style>
+        /* Hide Google Translate top banner & clean styling */
+        body {
+            top: 0 !important;
+            position: static !important;
+        }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+        }
+        .skiptranslate:not(.custom-language-selector) {
+            display: none !important;
+        }
+        .goog-tooltip, .goog-tooltip:hover {
+            display: none !important;
+        }
+        .goog-text-highlight {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+        #goog-gt-tt, .goog-te-balloon-frame {
+            display: none !important;
+        }
+</style>
 </head>
 
 <body class="bg-darkBg text-zinc-300 font-sans antialiased selection:bg-white selection:text-black overflow-x-hidden">
@@ -163,7 +295,7 @@
 
     <header
         class="border-b border-zincBorder border-opacity-50 bg-black/95 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 md:h-28 flex items-center justify-between">
+        <div class="max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 md:h-28 flex items-center justify-between gap-4">
 
             <!-- Brand Logo -->
             <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 group">
@@ -171,16 +303,18 @@
                     class="h-12 sm:h-16 md:h-20 w-auto object-contain transition duration-300 group-hover:scale-105">
                 <div class="flex flex-col border-l border-zincBorder pl-2 sm:pl-3 py-0.5">
                     <span
-                        class="text-[10px] sm:text-xs md:text-sm font-serif font-bold tracking-[0.15em] sm:tracking-[0.2em] text-white uppercase leading-tight">Airport</span>
+                        class="text-[10px] sm:text-xs md:text-sm font-serif font-bold tracking-[0.15em] sm:tracking-[0.2em] text-white uppercase leading-tight">
+                        Airport
+                    </span>
                     <span
-                        class="text-[10px] sm:text-xs md:text-sm font-serif font-bold tracking-[0.15em] sm:tracking-[0.2em] text-white uppercase leading-tight">Luggage
-                        Van</span>
+                        class="text-[10px] sm:text-xs md:text-sm font-serif font-bold tracking-[0.15em] sm:tracking-[0.2em] text-white uppercase leading-tight">
+                        Luggage Vans
+                    </span>
                 </div>
             </a>
 
             <!-- Desktop Navigation -->
-            <nav
-                class="hidden lg:flex items-center space-x-6 xl:space-x-7 text-xs uppercase tracking-[0.18em] font-medium">
+            <nav class="hidden xl:flex items-center space-x-5 2xl:space-x-7 text-xs uppercase tracking-[0.15em] font-medium flex-shrink-0">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="service.html" class="nav-link">Services</a>
@@ -193,7 +327,7 @@
             <!-- Header Right Controls -->
             <div class="flex items-center space-x-2 sm:space-x-3">
                 <a href="tel:+442038277777"
-                    class="flex items-center space-x-1.5 sm:space-x-2 border border-zincBorder px-2.5 sm:px-3 py-2 bg-zinc-900 hover:border-gold hover:text-gold transition text-white">
+                    class="hidden md:inline-flex items-center space-x-2 border border-zincBorder/80 px-3 py-2 bg-zinc-900/90 rounded-md hover:border-gold hover:text-gold transition text-white flex-shrink-0 text-[11px] uppercase tracking-wider font-semibold">
                     <span class="text-xs">📞</span>
                     <span class="hidden md:inline text-[10px] uppercase tracking-widest font-bold">+44 203 827
                         7777</span>
@@ -215,7 +349,7 @@
                     </select>
                 </div>
                 <button id="mobileMenuBtn" aria-label="Toggle Menu"
-                    class="lg:hidden flex justify-center items-center w-10 h-10 border border-zincBorder bg-zinc-900 text-white hover:border-gold hover:text-gold transition focus:outline-none">
+                    class="xl:hidden flex justify-center items-center w-10 h-10 border border-zincBorder bg-zinc-900 text-white hover:border-gold hover:text-gold transition focus:outline-none">
                     <svg id="menuIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -231,13 +365,13 @@
 
         <!-- Mobile Drawer -->
         <div id="mobileMenu"
-            class="hidden lg:hidden border-t border-zincBorder/60 bg-black/98 backdrop-blur-xl px-6 py-6 shadow-2xl">
+            class="hidden xl:hidden border-t border-zincBorder/60 bg-black/98 backdrop-blur-xl px-6 py-6 shadow-2xl">
             <nav class="flex flex-col space-y-4 text-xs uppercase tracking-[0.2em] font-medium">
                 <a href="index.html" class="nav-link py-2 border-b border-zincBorder/30">Home</a>
                 <a href="about.html" class="nav-link py-2 border-b border-zincBorder/30">About</a>
                 <a href="service.html" class="nav-link py-2 border-b border-zincBorder/30">Services</a>
                 <a href="fleet.html" class="nav-link py-2 border-b border-zincBorder/30">Fleet</a>
-                <a href="worldwide.html" class="nav-link py-2 border-b border-zincBorder/30">Worldwide</a>
+                <a href="worldwide.html" class="nav-link active py-2 border-b border-zincBorder/30">Worldwide</a>
                 <a href="booking.html" class="nav-link py-2 border-b border-zincBorder/30">Book Now</a>
                 <a href="contact.html" class="nav-link py-2">Contact</a>
             </nav>
@@ -315,9 +449,9 @@
         class="relative w-full h-[60vh] min-h-[450px] flex items-center justify-center bg-black overflow-hidden">
 
         <div class="absolute inset-0 w-full h-full">
-            <img src="theme5.jpg" alt="London Prestige Chauffeur Worldwide Network"
-                class="w-full h-full object-cover filter grayscale opacity-40 animate-[subtle-zoom_20s_ease-out_infinite]">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black"></div>
+            <img src="long luggage .png.jpg" alt="London Prestige Mercedes LWB Luggage Van"
+                class="w-full h-full object-cover opacity-60 filter brightness-90 animate-[subtle-zoom_20s_ease-out_infinite]">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/80"></div>
         </div>
 
         <div class="relative z-10 text-center max-w-4xl px-4 mx-auto space-y-6">
@@ -448,64 +582,19 @@
         </div>
     </section>
 
-    <section class="py-24 bg-zinc-950 border-t border-zincBorder">
-        <div class="max-w-3xl mx-auto px-4 text-center mb-16">
-            <h3 class="text-3xl font-serif text-white uppercase tracking-wider">Global Dispatch Request</h3>
-            <p class="text-zinc-500 text-xs uppercase tracking-widest mt-2">Centralized international booking matrix for
-                worldwide fleet coordination</p>
-        </div>
-
-        <form class="max-w-3xl mx-auto px-4 space-y-8 grid grid-cols-1 md:grid-cols-2 md:gap-x-8 md:gap-y-6"
-            action="global-submit.php" method="POST">
-
-            <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Corporate Name / Client</label>
-                <input type="text" name="global_name"
-                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
-                    placeholder="e.g. Luxury Travel Desk or Executive Name" required>
+      <!-- Chauffeur Prompt Section -->
+      <section class="py-12 px-4 max-w-7xl mx-auto">
+        <a href="https://prestigechauffeurworldwide.com/" target="_blank" rel="noopener noreferrer" class="chauffeur-banner-link">
+            <div class="chauffeur-banner">
+                <div class="chauffeur-content">
+                    <h2>Do you need a WORLDWIDE chauffeur?</h2>
+                    <p>Explore Our Luxury Fleet &rarr;</p>
+                </div>
             </div>
+        </a>
+      </section>
 
-            <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Target Region & City</label>
-                <input type="text" name="global_region"
-                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
-                    placeholder="e.g. Middle East (Dubai) or Europe (Paris)" required>
-            </div>
-
-            <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Flight & Terminal Specifics</label>
-                <input type="text" name="global_flight"
-                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
-                    placeholder="e.g. EK001 or Private Jet Tail Number" required>
-            </div>
-
-            <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Total Luggage Payload / Fleet
-                    Required</label>
-                <input type="text" name="global_baggage"
-                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
-                    placeholder="e.g. 25 Heavy Cases (Requires Sprinter)" required>
-            </div>
-
-            <div class="space-y-2 md:col-span-2">
-                <label class="text-[10px] uppercase tracking-widest text-zinc-500">Global Operational Dispatch
-                    Date</label>
-                <input type="datetime-local" name="global_datetime"
-                    class="w-full bg-[#121212] border border-zincBorder p-3 text-white text-xs focus:border-gold focus:outline-none"
-                    required>
-            </div>
-
-            <div class="md:col-span-2 pt-4">
-                <button type="submit"
-                    class="w-full bg-black border border-gold text-gold py-4 text-sm font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition">
-                    Initiate Global Dispatch &rarr;
-                </button>
-            </div>
-
-        </form>
-    </section>
-
-                            <!-- ================= BRAND FOOTER WITH LARGER LOGO & RELEVANT INTERNAL LINKS ================= -->
+                        <!-- ================= BRAND FOOTER WITH LARGER LOGO & RELEVANT INTERNAL LINKS ================= -->
     <style>
         .custom-footer {
             background-color: #0b0b0b;
@@ -659,12 +748,12 @@
             <div class="footer-col">
                 <h4>OUR SERVICES</h4>
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
-                    <li><a href="booking.html">Airport Luggage Transfers</a></li>
-                    <li><a href="booking.html">Touring Luggage Transfers</a></li>
-                    <li><a href="booking.html">Corporate Luggage Transfers</a></li>
-                    <li><a href="booking.html">Business Luggage Transfers</a></li>
-                    <li><a href="booking.html">First Class Luggage Transfers</a></li>
-                    <li><a href="booking.html">Wedding Luggage Transfers</a></li>
+                    <li><a href="service.html">Airport Luggage Transfers</a></li>
+                    <li><a href="service.html">Touring Luggage Transfers</a></li>
+                    <li><a href="service.html">Corporate Luggage Transfers</a></li>
+                    <li><a href="service.html">Business Luggage Transfers</a></li>
+                    <li><a href="service.html">First Class Luggage Transfers</a></li>
+                    <li><a href="service.html">Wedding Luggage Transfers</a></li>
                 </ul>
             </div>
 
@@ -683,14 +772,14 @@
             <div class="footer-col">
                 <h4>LONDON AIRPORTS</h4>
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
-                    <li><a href="booking.html">London Heathrow Airport</a></li>
-                    <li><a href="booking.html">London Gatwick Airport</a></li>
-                    <li><a href="booking.html">London City Airport</a></li>
-                    <li><a href="booking.html">London Private Airport</a></li>
-                    <li><a href="booking.html">London Stansted Airport</a></li>
-                    <li><a href="booking.html">London Southend Airport</a></li>
-                    <li><a href="booking.html">London Luton Airport</a></li>
-                    <li><a href="booking.html">Windsor Suite Heathrow</a></li>
+                    <li><a href="airport-details.html?airport=heathrow">London Heathrow Airport</a></li>
+                    <li><a href="airport-details.html?airport=gatwick">London Gatwick Airport</a></li>
+                    <li><a href="airport-details.html?airport=city">London City Airport</a></li>
+                    <li><a href="airport-details.html?airport=private">London Private Airport</a></li>
+                    <li><a href="airport-details.html?airport=stansted">London Stansted Airport</a></li>
+                    <li><a href="airport-details.html?airport=southend">London Southend Airport</a></li>
+                    <li><a href="airport-details.html?airport=luton">London Luton Airport</a></li>
+                    <li><a href="airport-details.html?airport=windsor">Windsor Suite Heathrow</a></li>
                 </ul>
             </div>
 
@@ -711,14 +800,14 @@
 
             <!-- Col 5: Contact & Social -->
             <div class="footer-col">
-                <h4>TERMINAL CONNECTION</h4>
+                <h4>Contact Us</h4>
                 <div class="footer-contact-item">
                     <span class="footer-contact-icon">📞</span>
                     <a href="tel:+442038277777" style="font-size:13px;">+44 203 827 7777</a>
                 </div>
                 <div class="footer-contact-item">
                     <span class="footer-contact-icon">📧</span>
-                    <a href="mailto:bookings@airportluggagevan.com" style="font-size:13px;">bookings@airportluggagevan.com</a>
+                    <a href="mailto:bookings@airportluggagevans.com" style="font-size:13px;">bookings@airportluggagevan.com</a>
                 </div>
                 <div class="footer-contact-item">
                     <span class="footer-contact-icon">📍</span>
@@ -729,15 +818,15 @@
                 <div style="margin-top: 8px; margin-bottom: 8px;">
                     <p style="font-size: 11px; letter-spacing: 1.5px; color: #555; text-transform: uppercase; margin-bottom: 12px;">Follow Us</p>
                 </div>
-                <div class="social-icons">
+                   <div class="social-icons">
                     <!-- Facebook -->
-                    <a href="https://www.facebook.com/londonprestigechauffeur" target="_blank" rel="noopener" aria-label="Facebook" title="Follow us on Facebook">
+                    <a href="https://www.facebook.com/airportluggagevans" target="_blank" rel="noopener" aria-label="Facebook" title="Follow us on Facebook">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
                     <!-- Instagram -->
-                    <a href="https://www.instagram.com/airportluggagevanz?utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" title="Follow us on Instagram">
+                    <a href="https://www.instagram.com/airportluggagevanz" target="_blank" rel="noopener" aria-label="Instagram" title="Follow us on Instagram">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                         </svg>
@@ -799,8 +888,29 @@
             }
         });
     </script>
-    <!-- Google Translate Engine & Instant Switch Script -->
+        <!-- Google Translate Engine & Instant Cookie Switch Script -->
     <script type="text/javascript">
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
@@ -810,18 +920,47 @@
         }
 
         function translatePage(langCode) {
-            if (!langCode) return;
+            if (!langCode || langCode === 'en') {
+                // Clear googtrans cookie to reset to default English
+                document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.hostname;
+                var selectElement = document.querySelector('.goog-te-combo');
+                if (selectElement) {
+                    selectElement.value = 'en';
+                    selectElement.dispatchEvent(new Event('change'));
+                }
+                setTimeout(function() { window.location.reload(); }, 200);
+                return;
+            }
 
-            // Google Translate dropdown element pick karke language switch karna
+            // Set the googtrans cookie for instantaneous and persistent translation
+            var transVal = '/en/' + langCode;
+            document.cookie = "googtrans=" + transVal + "; path=/;";
+            document.cookie = "googtrans=" + transVal + "; path=/; domain=" + window.location.hostname;
+
             var selectElement = document.querySelector('.goog-te-combo');
             if (selectElement) {
                 selectElement.value = langCode;
                 selectElement.dispatchEvent(new Event('change'));
+            } else {
+                window.location.reload();
             }
         }
+
+        // Keep dropdown in sync with current active language cookie
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentTrans = getCookie('googtrans');
+            if (currentTrans) {
+                var parts = currentTrans.split('/');
+                var targetLang = parts[parts.length - 1];
+                var select = document.getElementById('languageSelect');
+                if (select && targetLang) {
+                    select.value = targetLang;
+                }
+            }
+        });
     </script>
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
